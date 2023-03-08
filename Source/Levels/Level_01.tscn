@@ -8,8 +8,6 @@
 [ext_resource path="res://Sprites/Backgrounds/sala_fase00.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Objects/InteractableItems/Scrolls/scroll_big2_transparent.png" type="Texture" id=7]
 
-
-
 [node name="Level_01" type="Node2D"]
 script = ExtResource( 5 )
 

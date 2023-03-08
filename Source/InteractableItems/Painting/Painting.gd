@@ -15,6 +15,7 @@ onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
 onready var animated_sprite: AnimatedSprite = get_node(".")
 
 export var score: = 50
+var interacted: bool = false
 
 # Função pré-processada antes da execução
 func _ready():
@@ -31,7 +32,9 @@ func _input(event: InputEvent):
 		if collected:
 			# Função que reproduz a animação "print" do baú, contida no filho "AnimationPlayer", mostrando a pintura escrevendo algo
 			animation_player.play("print")
-			PlayerData.score += score
+			if (!interacted):
+				PlayerData.score += score
+				interacted = true
 			# Libera o texto oculto contido no pergaminho, texto este contido dentro do objeto "Label"
 			instruction.show()
 			
