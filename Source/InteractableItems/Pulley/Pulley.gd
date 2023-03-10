@@ -5,6 +5,8 @@ var is_player_inside: bool = false
 var activate_chests: bool = false
 var instruction: Label
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
+export var score_pulley = 50
+var interacted: bool = false
 
 func _ready():
 	animation_player.play("idle")
@@ -14,6 +16,9 @@ func _input(event):
 	if event.is_action_pressed("interact") and is_player_inside and got_potion:
 		animation_player.play("spin")
 		activate_chests = true
+		if !interacted:
+			PlayerData.score += score_pulley
+			interacted = true
 		instruction.show()
 
 
