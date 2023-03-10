@@ -6,6 +6,8 @@ var painting2: Sprite
 var painting_false: Sprite
 var instruction: Label
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
+export var score_balance_if_else_invert = 50
+var interacted: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +17,9 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("interact") and is_player_inside and got_blue:
 		animation_player.play("action_invert")
+		if (!interacted):
+			PlayerData.score += score_balance_if_else_invert
+			interacted = true
 		instruction.show()
 
 

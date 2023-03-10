@@ -6,6 +6,8 @@ var painting: Sprite
 var painting_true: Sprite
 var instruction: Label
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
+export var score_balance_minor = 50
+var interacted: bool = false
 
 func _ready():
 	animation_player.play("idle")
@@ -14,6 +16,9 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("interact") and is_player_inside and got_green:
 		animation_player.play("minor")
+		if (!interacted):
+			PlayerData.score += score_balance_minor
+			interacted = true
 		instruction.show()
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:

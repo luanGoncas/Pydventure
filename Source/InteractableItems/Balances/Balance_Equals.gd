@@ -6,6 +6,8 @@ var painting3: Sprite
 var painting_true2: Sprite
 var instruction: Label
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
+export var score_balance_equals = 50
+var interacted: bool = false
 
 func _ready():
 	animation_player.play("idle")
@@ -14,6 +16,9 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("interact") and is_player_inside and got_red:
 		animation_player.play("equals")
+		if (!interacted):
+			PlayerData.score += score_balance_equals
+			interacted = true
 		instruction.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

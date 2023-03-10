@@ -19,6 +19,9 @@ var opened_A: bool = false
 # Variável que irá pegar o filho do tipo "AnimationPlayer" para utilizar todas as animações do baú
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
 
+var interacted: bool = false
+export var score_chest_B = 25
+
 # Função pré-processada antes da execução
 func _ready():
 	
@@ -36,6 +39,10 @@ func _input(event: InputEvent):
 		
 		# Função que reproduz a animação "show_potion" do baú, contida no filho "AnimationPlayer", mostrando o baú copiando a exibindo a poção
 		animation_player.play("show_potion")
+		
+		if (!interacted):
+			PlayerData.score += score_chest_B
+			interacted = true
 		
 		# Libera o texto oculto contido no pergaminho, texto este contido dentro do objeto "Label"
 		instruction.show()
