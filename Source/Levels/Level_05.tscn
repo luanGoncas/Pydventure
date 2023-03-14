@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Source/Levels/Level_05.gd" type="Script" id=1]
 [ext_resource path="res://Source/InteractableItems/Balances/Balance_If_Else_Diamond_Else.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Source/Levels/MedievalTileSet.tres" type="TileSet" id=8]
 [ext_resource path="res://Sprites/Objects/InteractableItems/Scrolls/scroll2_transparent.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Backgrounds/sala_if.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Potions/green_potion_transparent.png" type="Texture" id=11]
 
 [node name="Level_05" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,6 +34,9 @@ position = Vector2( 337.463, 275.667 )
 
 [node name="Potion2" parent="Potions" instance=ExtResource( 5 )]
 position = Vector2( 849.201, 227.539 )
+
+[node name="Sprite" parent="Potions/Potion2" index="1"]
+texture = ExtResource( 11 )
 
 [node name="Balances" type="Node2D" parent="."]
 
@@ -105,5 +109,7 @@ margin_right = 5.25301
 margin_bottom = 58.5139
 text = "else:
    print()"
+
+[editable path="Potions/Potion2"]
 
 [editable path="Player"]

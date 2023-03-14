@@ -1,36 +1,22 @@
 extends KinematicBody2D
 
-# Intervalo de andares do elevador
-export(int, 0, 5) var levels = 0
+export(int, 0, 5) var levels = 0 # Elevator levels
+export var distance = 0 # Distance traversed
+var using: bool = false # Elevator using verifier
+var move: Vector2 # Elevator moving variable
+var t: float = 0 # Sets elevator physics
+var level_at: int = 0 # Checks elevator current level
+var player_entered: bool = false # Player area verifier
+var right_answer: bool = false # Question answer verifier
 
-# Variável que verifica a distância percorrida
-export var distance = 0
-
-# Variável que verifica se o elevador está sendo usado
-var using: bool = false
-
-# Variável para mover o elevador
-var move: Vector2
-
-# Variável que configura a física do elevador
-var t: float = 0
-
-# Variável que verifica o andar atual do elevador
-var level_at: int = 0
-
-# Variável que verifica se o jogador entrou no elevador
-var player_entered: bool = false
-
-# Variável para confirmar que o jogador selecionou a opçao correta
-var right_answer: bool = false
-
-# Variáveis para imprimir as instruções no pergaminho
+# Scroll instructions settings
 var instruction: Label
 var instruction2: Label
 var instruction3: Label
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	# Sets elevator position at the game
 	move = global_position
 	pass # Replace with function body.
 
@@ -38,20 +24,25 @@ func _input(event):
 	if !using:
 		return
 	if event.is_action_pressed("interact") and level_at < levels:
-		player_entered = true
+		player_entered = true # Confirms that the player is inside the elevator and using it
 		if right_answer:
-			instruction.show()
+			instruction.show() # Writes code at the scroll
+			
+			# The elevator moves
 			move.y -= distance
 			move.x += distance
 			t = 0
-			level_at += 1
+			level_at += 1 # Increases the elevator level
+			
 			if level_at == 2:
-				instruction2.show()
+				instruction2.show() # Writes code at the scroll
 			if level_at == levels:
-				instruction3.show()
-			print(move.x)
-			print(move.y)
-			print(level_at)
+				instruction3.show() # Writes code at the scroll
+			
+			# Debugging prints only
+#			print(move.x)
+#			print(move.y)
+#			print(level_at)
 			right_answer = false
 
 func _physics_process(delta):
@@ -59,16 +50,13 @@ func _physics_process(delta):
 		t =+ delta * .3
 		global_position = global_position.linear_interpolate(move, t)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+# Player area verifier method
 func _on_Area2D_player_entered(_player: KinematicBody2D) -> void:
 	using = true
-	pass # Replace with function body.
+	pass
 
-
+# Player area verifier method
 func _on_Area2D_player_exited(_player: KinematicBody2D) -> void:
 	player_entered = false
 	using = false
-	pass # Replace with function body.
+	pass

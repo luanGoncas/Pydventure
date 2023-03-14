@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://Source/Player/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Source/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Hero Knight/Idle/HeroKnight_Idle_0.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Hero Knight/Idle/HeroKnight_Idle_1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Hero Knight/Jump/HeroKnight_Jump_2.png" type="Texture" id=4]
@@ -30,14 +30,12 @@
 [ext_resource path="res://Source/Fonts/alagard.ttf" type="DynamicFontData" id=28]
 [ext_resource path="res://Source/Player/QuestionBox.tscn" type="PackedScene" id=29]
 
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "Idle",
-"speed": 10.0
+"name": "Fall",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 4 ) ],
 "loop": true,
@@ -49,10 +47,10 @@ animations = [ {
 "name": "Run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "Fall",
-"speed": 5.0
+"name": "Idle",
+"speed": 10.0
 } ]
 
 [sub_resource type="DynamicFont" id=2]

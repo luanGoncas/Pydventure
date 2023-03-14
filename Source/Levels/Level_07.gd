@@ -1,5 +1,8 @@
 extends Node2D
-export var score_quiz = 25
+
+export var score_quiz = 25 # Answer correct default score value
+
+# Question interaction verifiers
 var interactable_question_01: bool = false
 var interactable_question_02: bool = false
 var interactable_question_03: bool = false
@@ -7,19 +10,22 @@ var interactable_question_04: bool = false
 var interactable_question_05: bool = false
 
 func _ready():
+	
+	# Scroll instructions verifiers
 	$Elevator.instruction = $Player/Scroll/Label
 	$Elevator.instruction2 = $Player/Scroll/Label2
 	$Elevator.instruction3 = $Player/Scroll/Label3
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if get_node("Elevator").player_entered:
-		$Player.motion.y = $Elevator.move.y
-		question_change(get_node("Elevator").level_at)
 	pass
 
+func _process(delta):
+	
+	# Checks if the player is inside the elevator
+	if get_node("Elevator").player_entered:
+		$Player.motion.y = $Elevator.move.y
+		question_change(get_node("Elevator").level_at) # Question changer according the elevator height
+	pass
+
+# Questions method
 func question_change(level):
 	if level == 0:
 		if not $Player/QuestionBoxes/QuestionBox.visible:

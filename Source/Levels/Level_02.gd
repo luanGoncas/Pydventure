@@ -1,5 +1,6 @@
 extends Node2D
 
+# Sets the code that will be written by the painting interactions
 func _ready():
 	$Paintings/Painting_Sum.instruction = $Player/Scroll/Label
 	$Paintings/Painting_Sub.instruction = $Player/Scroll/Label2
@@ -7,6 +8,8 @@ func _ready():
 	$Paintings/Painting_Div.instruction = $Player/Scroll/Label4
 
 func _process(delta):
+	
+	# Potions verifier
 	if get_node("Potions/Potion").collected:
 		$Cauldrons/Cauldron.got_red = true
 	
@@ -31,6 +34,7 @@ func _process(delta):
 	if get_node("Potions/Potion8").collected:
 		$Cauldrons/Cauldron3.got_red = true
 	
+	# Paintings verifier
 	if $Cauldrons/Cauldron.got_potion:
 		$Paintings/Painting_Sum.collected = true
 	

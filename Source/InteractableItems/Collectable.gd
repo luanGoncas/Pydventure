@@ -1,22 +1,15 @@
-# Herda todos os atributos e métodos do tipo "Area2D"
 extends Area2D
 
-# Confirma se o item coletável foi obtido
-var collected: bool = false
+var collected: bool = false # Collectable item verifier
 
-# Função de coleta da poção
+# Collectable item area method
 func _on_Potion_body_entered(_player: KinematicBody2D):
 	collected = true
-	# Oculta o sprite da poção da tela
-	$Sprite.hide()
-	#queue_free()
+	$Sprite.hide() # Hides the item collected
 	pass
 
-# Função de coleta do tinteiro
+# Collectable item area method
 func _on_Ink_Vase_body_entered(_player: KinematicBody2D):
 	collected = true
-	
-	# Oculta o sprite do tinteiro da tela
-	$Sprite.hide()
-	#queue_free()
-	pass # Replace with function body.
+	$Sprite.hide() # Hides the ink vase collected
+	pass
