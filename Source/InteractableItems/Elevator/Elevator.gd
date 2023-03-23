@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var reset_position: Vector2
 export(int, 0, 5) var levels = 0 # Elevator levels
 export var distance = 0 # Distance traversed
 var using: bool = false # Elevator using verifier
@@ -8,6 +9,7 @@ var t: float = 0 # Sets elevator physics
 var level_at: int = 0 # Checks elevator current level
 var player_entered: bool = false # Player area verifier
 var right_answer: bool = false # Question answer verifier
+var wrong_answer: bool = false # Question answer verifier
 
 # Scroll instructions settings
 var instruction: Label
@@ -18,6 +20,7 @@ func _ready():
 	
 	# Sets elevator position at the game
 	move = global_position
+	reset_position = global_position # Default elevator initial position
 	pass # Replace with function body.
 
 func _input(event):
@@ -44,6 +47,10 @@ func _input(event):
 #			print(move.y)
 #			print(level_at)
 			right_answer = false
+#		if wrong_answer:
+#			level_at = 0
+#			move = reset_position
+#			wrong_answer = false
 
 func _physics_process(delta):
 	if move != global_position:

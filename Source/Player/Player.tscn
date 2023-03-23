@@ -32,24 +32,24 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "Fall",
-"speed": 5.0
+"name": "Idle",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 7 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "Run",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Idle",
 "speed": 10.0
 } ]
 
