@@ -9,7 +9,7 @@
 size = 8
 font_data = ExtResource( 4 )
 
-[node name="CommonWorld" type="Node"]
+[node name="CallToAdventure" type="Node"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
