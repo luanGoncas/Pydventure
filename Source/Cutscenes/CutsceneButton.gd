@@ -1,14 +1,20 @@
-tool 
+tool
 extends TextureButton
 
 export(String) var text = "Text button" # The text displayed on screen
-export(int) var arrow_margin_from_center = 100 # The margin space from the middle of the button for arrows
+export(int) var arrow_margin_from_center = 200 # The margin space from the middle of the button for arrows
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	setup_text()
 	hide_arrows()
-	set_focus_mode(true)
+	set_focus_mode(true) # Sets the focus for keyboard
+
+func _process(delta):
+	
+	# Sets the arrow margin manually at the inspector node
+	if Engine.editor_hint:
+		setup_text()
+		show_arrows()
 
 # Sets the text and the bbcode
 func setup_text():
@@ -27,27 +33,18 @@ func show_arrows():
 	$LeftArrow.global_position.x = center_x - arrow_margin_from_center
 	$RightArrow.global_position.x = center_x + arrow_margin_from_center
 
-func _process(delta):
-	
-	# Sets the arrow margin manually at the inspector node
-	if Engine.editor_hint:
-		setup_text()
-		show_arrows()
-	pass
-
+# Function to hide the arrows on screen
 func hide_arrows():
 	for arrow in [$LeftArrow, $RightArrow]:
 		arrow.visible = false
 
-
+# Function that will show the arrows when button is focused
 func _on_TextureButton_focus_entered():
 	show_arrows()
 
-
+# Function that will hide the arrows when button isn't focused anymore
 func _on_TextureButton_focus_exited():
 	hide_arrows()
-	pass # Replace with function body.
-
 
 func _on_TextureButton_mouse_entered():
 	grab_focus()

@@ -5,8 +5,6 @@
 [ext_resource path="res://Source/Fonts/alagard.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Objects/UI/question_board_transparent.png" type="Texture" id=4]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 3 )
