@@ -61,6 +61,5 @@ margin_right = 2905.0
 focus_neighbour_top = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 focus_mode = 1
-text = "Next"
-arrow_margin_from_center = 65
+text = "Próximo"
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]
