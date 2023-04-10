@@ -5,3 +5,4 @@ func _ready():
 
 func _on_Next_pressed():
 	print("YEAH! I DIED!!!")
+	SceneChanger.change_scene("res://Source/Levels/Level_01.tscn")
