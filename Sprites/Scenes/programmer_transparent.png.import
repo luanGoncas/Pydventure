@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/programmer.png-e2eab84a441991a9f7f75dc46d11bb30.stex"
+path="res://.import/programmer_transparent.png-7d77c551f081ad1ca0d43522b3d365bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Scenes/programmer.png"
-dest_files=[ "res://.import/programmer.png-e2eab84a441991a9f7f75dc46d11bb30.stex" ]
+source_file="res://Sprites/Scenes/programmer_transparent.png"
+dest_files=[ "res://.import/programmer_transparent.png-7d77c551f081ad1ca0d43522b3d365bf.stex" ]
 
 [params]
 
