@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Cutscenes/FirstMission.gd" type="Script" id=2]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Hero Knight/Idle/HeroKnight_Idle_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Scenes/guider_van_rossum_transparent.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Paintings/painting_writing_transparent.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="FirstMission" type="Node"]
+script = ExtResource( 2 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 4 )
+
+[node name="guider_van_rossum_transparent" type="Sprite" parent="."]
+position = Vector2( 528.862, 243.373 )
+texture = ExtResource( 6 )
+
+[node name="HeroKnight_Idle_0" type="Sprite" parent="."]
+position = Vector2( 112.911, 282.556 )
+texture = ExtResource( 5 )
+
+[node name="painting_writing_transparent" type="Sprite" parent="."]
+position = Vector2( 330.354, 249.376 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 1387.02, 1, 128, 92 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2344.91
+margin_top = 21.4686
+margin_right = 2353.09
+margin_bottom = 100.468
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2378.0
+margin_right = 2960.0
+margin_bottom = 206.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "O protagonista e Guider entram em um castelo e chegam a uma sala principal onde o conceito
+de uma linguagem de programação é explicado. Guider utiliza a analogia das regras de lin-
+guagem em português e inglês para explicar que uma linguagem de programação é uma forma
+padronizada de se comunicar com um computador. Van Rossum, então, instrui o protagonista
+a criar seu primeiro programa usando a linguagem Python, que será o famoso programa \"Olá
+Mundo!\". O protagonista entra em uma nova sala onde vê um pergaminho flutuante, um tinteiro
+e uma tela próxima. Guider explica que a função \"print\" em Python exibe informações a alguém.
+Segundo ele, o protagonista deve pegar o tinteiro para escrever essa mensagem na pintura des-
+crita para que o pergaminho gere o código desejado. Faça isto!
+
+E - Interagir   Espaço - Pular"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 210.0
+margin_right = 5338.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 5338.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]
