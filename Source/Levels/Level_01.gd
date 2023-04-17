@@ -9,3 +9,9 @@ func _ready():
 func _process(delta):
 	if get_node("Ink_Vase").collected:
 		$Painting.collected = true
+	
+	if get_node("Painting").next_room:
+		get_node("Door").level_clear = true
+		
+	if get_node("Door").door_open:
+		SceneChanger.change_scene("res://Source/Cutscenes/Chapter05/WhaleBelly.tscn")

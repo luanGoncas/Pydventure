@@ -1,33 +1,39 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Source/Cutscenes/CommonWorld.gd" type="Script" id=2]
+[ext_resource path="res://Source/Cutscenes/Chapter03/TheMentor.gd" type="Script" id=2]
 [ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Scenes/programmer_transparent.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Scenes/python-logo.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Scenes/guider_van_rossum_transparent.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
 
-[node name="CommonWorld" type="Node"]
+[node name="TheMentor" type="Node"]
 script = ExtResource( 2 )
 
 [node name="text_box__transparent" type="Sprite" parent="."]
-position = Vector2( 319.842, 179.892 )
-scale = Vector2( 0.994855, 0.744959 )
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
 texture = ExtResource( 4 )
 
-[node name="programmer_transparent" type="Sprite" parent="."]
-position = Vector2( 320.502, 189.106 )
+[node name="python-logo" type="Sprite" parent="."]
+position = Vector2( 109.237, 244.123 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
+
+[node name="guider_van_rossum_transparent" type="Sprite" parent="."]
+position = Vector2( 528.862, 243.373 )
+texture = ExtResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1439.23
-margin_top = -10.8263
-margin_right = 1444.77
-margin_bottom = 68.1737
+margin_left = -1438.2
+margin_top = -13.1051
+margin_right = 1445.8
+margin_bottom = 65.8948
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,12 +52,12 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "É de vital importância a informação na atualidade, e a programação é uma habilidade funda-
-mental para muitas profissões do futuro. O protagonista, entusiasmado com essa perspectiva,
-começa a estudar programação, mas logo se vê frustrado com a complexidade e falta de lógica
-do assunto. Ele sofre com a ansiedade e queda de rendimento em outras tarefas, e seus amigos
-o aconselham a desistir do curso. Ao final de uma frustada jornada de estudos, o protagonis-
-ta verifica sua caixa de e-mail, com muitas dúvidas em mente."
+text = "O protagonista acorda em um lugar desconhecido, parecendo uma época medieval, e é aborda-
+do por um homem que se apresenta como Guider Van Rossum. Ele explica que está ali para a-
+judar o protagonista a aprender programação, usando a linguagem Python. Van Rossum expli-
+ca que o castelo em frente a eles está relacionado ao ensino dessa linguagem e que serão usa-
+dos pergaminhos para explicar as regras para a execução desta magia. O protagonista, apesar
+de estar inseguro, entra no castelo para começar a aprender programação."
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 184.0
@@ -65,5 +71,4 @@ margin_right = 3524.0
 focus_neighbour_top = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 text = "Próximo"
-arrow_margin_from_center = 69
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

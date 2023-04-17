@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Source/InteractableItems/Ink_Vase/Ink_Vase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Source/Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Source/Levels/Level_01.gd" type="Script" id=5]
 [ext_resource path="res://Sprites/Backgrounds/sala_fase00.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Objects/InteractableItems/Scrolls/scroll_big2_transparent.png" type="Texture" id=7]
+[ext_resource path="res://Source/InteractableItems/Doors/Door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Doors/door4.png" type="Texture" id=9]
 
 [node name="Level_01" type="Node2D"]
 script = ExtResource( 5 )
@@ -14,6 +16,10 @@ script = ExtResource( 5 )
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 384, 144 )
 texture = ExtResource( 6 )
+
+[node name="Start" type="Sprite" parent="."]
+position = Vector2( 62.0561, 116.05 )
+texture = ExtResource( 9 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -27,6 +33,9 @@ position = Vector2( 211.814, 223.017 )
 
 [node name="Painting" parent="." instance=ExtResource( 3 )]
 position = Vector2( 383.107, 209.209 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 697.002, 116.067 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 61.6112, 118.965 )

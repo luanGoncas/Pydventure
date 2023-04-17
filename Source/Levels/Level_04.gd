@@ -25,4 +25,9 @@ func _process(delta):
 		$Balances/Balance_If_Else_Invert.got_blue = true
 	if get_node("Potions/Potion3").collected:
 		$Balances/Balance_Equals.got_red = true
-	pass
+	
+	if get_node("Balances/Balance_Equals").finished and get_node("Balances/Balance_If_Else_Invert").finished and get_node("Balances/Balance_Minor").finished:
+		get_node("Door").level_clear = true
+	
+	if get_node("Door").door_open:
+		SceneChanger.change_scene("res://Source/Cutscenes/Chapter08/HiddenCave03.tscn")

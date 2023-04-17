@@ -7,6 +7,7 @@ onready var animation_player: AnimationPlayer = get_node("AnimationPlayer") # Ob
 onready var animated_sprite: AnimatedSprite = get_node(".") # Object animations
 export var score_painting: = 50 # Object default score value
 var interacted: bool = false # Interaction verifier
+var next_room: bool = false # Setter for next level
 
 func _ready():
 	animation_player.play("idle")
@@ -40,4 +41,5 @@ func _on_Area2D_body_exited(_player: KinematicBody2D):
 	pass # Replace with function body.
 
 func _on_AnimationPlayer_animation_finished(anim_name):
+	next_room = true
 	pass # Replace with function body.

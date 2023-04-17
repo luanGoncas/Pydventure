@@ -8,6 +8,7 @@ var instruction: Label # Label for writting at the scroll
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer") # Object animations
 export var score_balance_equals = 50 # Object default score value
 var interacted: bool = false # Interaction verifier
+var finished: bool = false # Interaction finished verifier
 
 func _ready():
 	animation_player.play("idle")
@@ -37,4 +38,5 @@ func _on_Area2D_player_exited(_player: KinematicBody2D) -> void:
 func _on_AnimationPlayer_animation_finished(anim_name):
 	painting3.hide()
 	painting_true2.show()
+	finished = true
 	pass

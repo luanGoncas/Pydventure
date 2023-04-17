@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Balances/balança_if_diamond2_transparent.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Scenes/guider_van_rossum_transparent.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Hero Knight/Idle/HeroKnight_Idle_0.png" type="Texture" id=6]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Source/Cutscenes/Chapter08/HiddenCave03.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 8 )
+
+[node name="HiddenCave03" type="Node"]
+script = ExtResource( 9 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 3 )
+
+[node name="guider_van_rossum_transparent" type="Sprite" parent="."]
+position = Vector2( 528.862, 243.373 )
+texture = ExtResource( 5 )
+
+[node name="HeroKnight_Idle_0" type="Sprite" parent="."]
+position = Vector2( 112.911, 282.556 )
+texture = ExtResource( 6 )
+
+[node name="balança_if_diamond2_transparent" type="Sprite" parent="."]
+position = Vector2( 370.572, 182.095 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 214, 122.8 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2345.18
+margin_top = -10.9156
+margin_right = 2352.82
+margin_bottom = 68.0838
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2380.0
+margin_top = 34.0
+margin_right = 2958.0
+margin_bottom = 145.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Através do aprendizado de operadores relacionais, as balanças serão novamente de grande a-
+juda nas sentenças condicionais que, segundo Guider Van Rossum, executam comandos em Py-
+thon de acordo com algum estado do código. Caso contrário, executam outro comando. A tare-
+fa do protagonista é acionar essas balanças modificadas com sentenças condicionais e ver o
+retorno dos comandos
+ "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 5338.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 5338.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

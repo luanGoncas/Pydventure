@@ -7,6 +7,7 @@ var is_opened: bool = false # Chest open verifier
 var instruction: Label 
 var instruction2: Label
 
+var next_room: bool = false # Next stage confirmer
 var got_potion: bool = false # Potion verifier
 var opened_A: bool = false # Chest open verifier
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer") # Object animations
@@ -42,4 +43,5 @@ func _on_Area2D_body_exited(_player: KinematicBody2D):
 
 func _on_AnimationPlayer_animation_finished(_anim_name: AnimatedSprite):
 	instruction2.show() # Writes code at the scroll
+	next_room = true
 	pass

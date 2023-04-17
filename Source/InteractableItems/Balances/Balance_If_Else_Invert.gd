@@ -8,6 +8,7 @@ var instruction: Label # Label that will write code at the scroll
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer") # Object animations
 export var score_balance_if_else_invert = 50 # Object default score value
 var interacted: bool = false # Interaction verifier
+var finished: bool = false # Interaction finished verifier
 
 func _ready():
 	animation_player.play("idle")
@@ -27,6 +28,7 @@ func _input(event):
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	painting2.hide()
 	painting_false.show()
+	finished = true
 	pass
 
 # Player area verifier method

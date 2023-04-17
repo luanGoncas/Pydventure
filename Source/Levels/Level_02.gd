@@ -1,5 +1,7 @@
 extends Node2D
 
+var total_operations: int = 0
+
 # Sets the code that will be written by the painting interactions
 func _ready():
 	$Paintings/Painting_Sum.instruction = $Player/Scroll/Label
@@ -46,3 +48,9 @@ func _process(delta):
 	
 	if $Cauldrons/Cauldron4.got_potion:
 		$Paintings/Painting_Div.collected = true
+	
+	if get_node("Paintings/Painting_Sum").interacted and get_node("Paintings/Painting_Sub").interacted and get_node("Paintings/Painting_Mult").interacted and get_node("Paintings/Painting_Div").interacted:
+		get_node("Door").level_clear = true
+	
+	if get_node("Door").door_open:
+		SceneChanger.change_scene("res://Source/Cutscenes/Chapter06/HiddenCave01.tscn")

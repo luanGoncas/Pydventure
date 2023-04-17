@@ -5,4 +5,4 @@ func _ready():
 
 func _on_Next_pressed():
 	print("YEAH! TEST!!!")
-	SceneChanger.change_scene("res://Source/Cutscenes/CallToAdventure.tscn")
+	SceneChanger.change_scene("res://Source/Cutscenes/Chapter03/TheMentor.tscn")

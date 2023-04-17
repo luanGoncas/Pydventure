@@ -16,4 +16,10 @@ func _process(delta):
 		
 	if get_node("Chests/Chest_A").opened_A:
 		$Chests/Chest_B.opened_A = true
+		
+	if get_node("Chests/Chest_B").next_room:
+		get_node("Door").level_clear = true
+	
+	if get_node("Door").door_open:
+		SceneChanger.change_scene("res://Source/Cutscenes/Chapter07/HiddenCave02.tscn")
 	pass

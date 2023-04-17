@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_sum2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_sub_transparent.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_div_transparent.png" type="Texture" id=4]
+[ext_resource path="res://Source/Cutscenes/Chapter05/WhaleBelly.gd" type="Script" id=5]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_mult_transparent.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Hero Knight/Idle/HeroKnight_Idle_0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Scenes/guider_van_rossum_transparent.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[node name="WhaleBelly" type="Node"]
+script = ExtResource( 5 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 9 )
+
+[node name="guider_van_rossum_transparent" type="Sprite" parent="."]
+position = Vector2( 528.862, 243.373 )
+texture = ExtResource( 10 )
+
+[node name="HeroKnight_Idle_0" type="Sprite" parent="."]
+position = Vector2( 112.911, 282.556 )
+texture = ExtResource( 8 )
+
+[node name="cauldron_sum2" type="Sprite" parent="."]
+position = Vector2( 276.189, 234.879 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1.17931, 17.0663, 30.9827, 32.5716 )
+
+[node name="cauldron_sub_transparent" type="Sprite" parent="."]
+position = Vector2( 309.395, 235.106 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 32.162, 17.0663, 32.5716, 33.366 )
+
+[node name="cauldron_mult_transparent" type="Sprite" parent="."]
+position = Vector2( 342.844, 235.505 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 65.1308, 17.0663, 30.5855, 32.1744 )
+
+[node name="cauldron_div_transparent" type="Sprite" parent="."]
+position = Vector2( 375.742, 235.206 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 95.7163, 15.4774, 32.9688, 34.9549 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2347.38
+margin_top = 14.8485
+margin_right = 2350.62
+margin_bottom = 93.8479
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2379.0
+margin_top = 6.0
+margin_right = 2958.0
+margin_bottom = 174.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Após a missão de introdução, o protagonista entra nas masmorras mais profundas do castelo,
+na qual se depara com diversos caldeirões e poções, além de mais pinturas na parede. Guider,
+antes de deixar o protagonista, o orienta e diz que operações matemáticas são essenciais na
+linguagem Python, e naquele castelo os caldeirões eram responsáveis por isso. Para escrever o
+código em Python no pergaminho, Guider afirma que o protagonista deve pegar as poções pró-
+ximas aos caldeirões, jogar neles, e tocar as pinturas para saber o resultado e gerar o código.
+Faça isso!
+
+E - Interagir   Espaço - Pular"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 5338.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 5338.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]
