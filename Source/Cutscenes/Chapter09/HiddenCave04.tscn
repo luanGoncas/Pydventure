@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/InteractableItems/Pulley/Pulley.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=3]
+[ext_resource path="res://Source/Cutscenes/Chapter09/HiddenCave04.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Scrolls/scroll_big_transparent.png" type="Texture" id=5]
+[ext_resource path="res://Source/Player/PlayerCutsceneIdle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/GuiderVanRossum/GuiderVanRossum.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 8 )
+
+[node name="HiddenCave04" type="Node"]
+script = ExtResource( 4 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 3 )
+
+[node name="scroll_big_transparent" type="Sprite" parent="."]
+position = Vector2( 201, 207 )
+texture = ExtResource( 5 )
+
+[node name="Pulley" parent="." instance=ExtResource( 2 )]
+position = Vector2( 389, 204 )
+scale = Vector2( 0.5, 0.5 )
+animation = "spin"
+frame = 6
+playing = true
+
+[node name="GuiderVanRossum" parent="." instance=ExtResource( 7 )]
+position = Vector2( 570, 241 )
+frame = 1
+flip_h = true
+
+[node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 6 )]
+position = Vector2( 80, 270 )
+frame = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2341.79
+margin_top = -5.7266
+margin_right = 2356.21
+margin_bottom = 73.2728
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2376.0
+margin_top = 25.0
+margin_right = 2962.0
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Guider Van Rossum parabeniza o protagonista, e o avisa de que a etapa mais desafiadora es-
+tá por vir, mas antes a última estrutura a ser aprendida: Laços de repetição. Segundo o men-
+tor, laços de repetição são instruções de fluxo que são executadas repetidamente dada uma de-
+terminada condição. Com isso em mente, ele diz que a tarefa do protagonista, para gerar o có-
+digo no pergaminho, e pegar a poção da sala, ativar a roldana, e acertar o baú contendo a
+mesma poção coletada. Errar o baú fará com que pontos sejam perdidos, então cuidado! E lem-
+bre-se: A porta só poderá ser aberta ao cumprir TODOS os desafios da sala!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 5338.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 5338.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

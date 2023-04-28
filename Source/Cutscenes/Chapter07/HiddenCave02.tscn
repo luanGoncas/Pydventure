@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Cutscenes/Chapter07/HiddenCave02.gd" type="Script" id=2]
+[ext_resource path="res://Source/InteractableItems/Balances/Balance_If_Else.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Potions/blue_potion_transparent.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Potions/red_potion_transparent.png" type="Texture" id=5]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Source/GuiderVanRossum/GuiderVanRossum.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Player/PlayerCutsceneIdle.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Scrolls/scroll_big_transparent.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[node name="HiddenCave02" type="Node"]
+script = ExtResource( 2 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 9 )
+
+[node name="blue_potion_transparent" type="Sprite" parent="."]
+position = Vector2( 296.933, 216.127 )
+texture = ExtResource( 4 )
+
+[node name="red_potion_transparent" type="Sprite" parent="."]
+position = Vector2( 420.646, 215.927 )
+texture = ExtResource( 5 )
+
+[node name="Balance_If_Else" parent="." instance=ExtResource( 3 )]
+position = Vector2( 356.379, 194.186 )
+animation = "action"
+frame = 6
+playing = true
+
+[node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 8 )]
+position = Vector2( 113.616, 247.834 )
+frame = 5
+
+[node name="GuiderVanRossum" parent="." instance=ExtResource( 7 )]
+position = Vector2( 533.318, 224.077 )
+frame = 2
+flip_h = true
+
+[node name="scroll_big_transparent" type="Sprite" parent="."]
+position = Vector2( 233.709, 206.145 )
+texture = ExtResource( 10 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2346.38
+margin_top = -5.48825
+margin_right = 2351.62
+margin_bottom = 73.5111
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2379.0
+margin_top = 25.0
+margin_right = 2959.0
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Após o protagonista seguir viagem e entrar em uma nova sala, Guider Van Rossum aparece no-
+vamente e diz que nessa sala será aprendido o conceito de operadores relacionais, já que em
+Python é extremamente importante a comparação de grandezas. O mentor explica que as balan-
+ças na sala usarão as poções, que são os valores, para trabalhar e informar uma verdade ou
+uma falsidade, e escrever o código no pergaminho. Para isso, o protagonista deve pegar as po-
+ções e inserí-las nas balanças dispostas na sala. Faça isso, e lembre-se: A porta só poderá ser
+aberta ao cumprir TODOS os desafios da sala!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 5338.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 5338.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

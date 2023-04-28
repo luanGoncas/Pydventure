@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Cutscenes/Chapter03/TheMentor.gd" type="Script" id=2]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Scenes/python-logo.png" type="Texture" id=5]
+[ext_resource path="res://Source/GuiderVanRossum/GuiderVanRossum.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="TheMentor" type="Node"]
+script = ExtResource( 2 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 4 )
+
+[node name="python-logo" type="Sprite" parent="."]
+position = Vector2( 109.237, 244.123 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="GuiderVanRossum" parent="." instance=ExtResource( 6 )]
+position = Vector2( 529.197, 220.003 )
+frame = 5
+flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1438.2
+margin_top = -13.1051
+margin_right = 1445.8
+margin_bottom = 65.8948
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 3524.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 1471.0
+margin_top = 34.0
+margin_right = 2052.0
+margin_bottom = 145.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "O protagonista acorda em um lugar desconhecido, parecendo uma época medieval, e é aborda-
+do por um homem que se apresenta como Guider Van Rossum. Ele explica que está ali para a-
+judar o protagonista a aprender programação, usando a linguagem Python. Van Rossum expli-
+ca que o castelo em frente a eles está relacionado ao ensino dessa linguagem e que serão usa-
+dos pergaminhos para explicar as regras para a execução desta magia. O protagonista, apesar
+de estar inseguro, entra no castelo para começar a aprender programação."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 3524.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 3524.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

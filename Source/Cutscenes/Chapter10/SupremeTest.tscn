@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Player/PlayerCutsceneIdle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Córdex/Córdex.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/GuiderVanRossum/GuiderVanRossum.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Source/Cutscenes/Chapter10/SupremeTest.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
+
+[node name="SupremeTest" type="Node"]
+script = ExtResource( 6 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 7 )
+
+[node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 138.339, 257.883 )
+frame = 2
+
+[node name="Córdex" parent="." instance=ExtResource( 3 )]
+position = Vector2( 503.108, 230.653 )
+frame = 6
+flip_h = true
+
+[node name="GuiderVanRossum" parent="." instance=ExtResource( 4 )]
+position = Vector2( 81.5681, 241.144 )
+animation = "hurt"
+frame = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2340.66
+margin_top = -12.1025
+margin_right = 2357.34
+margin_bottom = 66.8969
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2375.0
+margin_top = 34.0
+margin_right = 2962.0
+margin_bottom = 145.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Quando finalmente consegue superar o desafio da roldana, algo inesperado acontece: Guider
+Van Rossum recebe um feitiço de alguém desconhecido. É ele, ninguém mais, ninguém menos, que
+Córdex, O Feiticeiro do Loop Infinito! Ele quer impedir o protagonista de encarar os seus pró-
+prios conhecimentos de frente, e por isso neutralizou o mago para que ele não o instrua ao rea-
+lizar o laço de repetição 'for' na próxima sala. Derrote Córdex ao responder todas as pergun-
+tas feitas dentro do elevador enfeitiçado!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 5338.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 5338.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Próximo"
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

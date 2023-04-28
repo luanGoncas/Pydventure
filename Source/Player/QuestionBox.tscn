@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Source/Player/QuestionOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Player/QuestionBox.gd" type="Script" id=2]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/Objects/UI/question_board_transparent.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="QuestionBox" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="question_board_transparent" type="Sprite" parent="."]
+position = Vector2( 318.646, 179.065 )
+scale = Vector2( 1.33314, 1.38221 )
+texture = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 109.531
+margin_right = 425.531
+margin_bottom = 364.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 316.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 53.0
+margin_top = 78.0
+margin_right = 262.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 1 )
+text = "WHAT FRUIT IS THIS?"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 316.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Option1" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 56.0
+margin_right = 316.0
+margin_bottom = 76.0
+focus_neighbour_top = NodePath("../Option3")
+focus_neighbour_bottom = NodePath("../Option2")
+text = "I think it's an apple!"
+arrow_margin_from_center = 107
+
+[node name="Option2" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 316.0
+focus_neighbour_top = NodePath("../Option1")
+focus_neighbour_bottom = NodePath("../Option3")
+text = "I think it's an orange!"
+arrow_margin_from_center = 114
+
+[node name="Option3" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 104.0
+margin_right = 316.0
+margin_bottom = 124.0
+focus_neighbour_top = NodePath("../Option2")
+focus_neighbour_bottom = NodePath("../Option1")
+text = "I think it's a banana!"
+arrow_margin_from_center = 113
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Option1" to="." method="_on_Option1_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Option2" to="." method="_on_Option2_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Option3" to="." method="_on_Option3_pressed"]
