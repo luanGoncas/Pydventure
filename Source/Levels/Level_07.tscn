@@ -6,7 +6,7 @@
 [ext_resource path="res://Sprites/Objects/InteractableItems/Scrolls/scroll_if_transparent.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Backgrounds/sala_for_v2.png" type="Texture" id=5]
 [ext_resource path="res://Source/Levels/Level_07.gd" type="Script" id=6]
-[ext_resource path="res://Source/Córdex/Córdex.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Córdex/Córdex_2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Source/InteractableItems/Levers/Lever.tscn" type="PackedScene" id=8]
 
 [node name="Level_07" type="Node2D"]
@@ -27,13 +27,15 @@ tile_data = PoolIntArray( -196614, 118, 0, -196613, 118, 0, -196612, 118, 0, -19
 [node name="Elevator" parent="." instance=ExtResource( 2 )]
 position = Vector2( 399.266, 1433.62 )
 
-[node name="Córdex" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1690.41, 331.027 )
-frame = 6
-flip_h = true
-
 [node name="Lever" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1030.05, 1373.17 )
+
+[node name="Córdex_2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1687.72, 313.514 )
+
+[node name="AnimatedSprite" parent="Córdex_2" index="0"]
+frame = 7
+flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 196.644, 1557.99 )
@@ -267,6 +269,8 @@ arrow_margin_from_center = 247
 margin_right = 3522.0
 text = "Ocorre um erro"
 arrow_margin_from_center = 93
+
+[editable path="Córdex_2"]
 
 [editable path="Player"]
 

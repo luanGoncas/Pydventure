@@ -24,8 +24,11 @@ func _process(delta):
 	if get_node("Elevator").player_entered:
 		$Player.motion.y = $Elevator.move.y # Syncronizes player and elevator movements
 		question_change(get_node("Elevator").level_at) # Question changer according the elevator height
-	pass
-
+	
+	if get_node("Córdex_2").dead:
+		get_node("Córdex_2/AnimatedSprite").hide()
+		get_node("Córdex_2/CollisionShape2D").disabled = true
+	
 # Questions method
 func question_change(level):
 	match level:
