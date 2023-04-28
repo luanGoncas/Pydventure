@@ -16,29 +16,9 @@ func _ready():
 	$Elevator.instruction2 = $Player/Scroll/Label2
 	$Elevator.instruction3 = $Player/Scroll/Label3
 	
-	get_node("Platforms/Platform/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform2/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform3/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform4/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform5/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform6/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform7/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform8/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform9/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform10/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform11/StaticBody2D/CollisionShape2D").disabled = true
-	get_node("Platforms/Platform12/StaticBody2D/CollisionShape2D").disabled = true
-	
 	pass
 
 func _process(delta):
-	if get_node("PositionFlag").elevator_has_passed:
-		get_node("Platforms/Platform").show()
-		get_node("Platforms/Platform/StaticBody2D/CollisionShape2D").disabled = false
-		get_node("Platforms/Platform2").show()
-		get_node("Platforms/Platform2/StaticBody2D/CollisionShape2D").disabled = false
-		get_node("Platforms/Platform3").show()
-		get_node("Platforms/Platform3/StaticBody2D/CollisionShape2D").disabled = false
 		
 	# Checks if the player is inside the elevator
 	if get_node("Elevator").player_entered:
@@ -119,6 +99,3 @@ func question_change(level):
 					interactable_question_05 = true
 			if $Player/QuestionBoxes/QuestionBox5.chosen_option2 or $Player/QuestionBoxes/QuestionBox5.chosen_option3:
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")
-#			if not $Player/QuestionBoxes/QuestionBox5.chosen_option:
-#				get_node("Elevator").wrong_answer = true
-#				$Player/QuestionBoxes/QuestionBox5.hide()
