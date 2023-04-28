@@ -26,9 +26,11 @@ tile_data = PoolIntArray( -196614, 118, 0, -196613, 118, 0, -196612, 118, 0, -19
 [node name="Elevator" parent="." instance=ExtResource( 2 )]
 position = Vector2( 399.266, 1433.62 )
 
+[node name="AnimatedSprite" parent="Elevator" index="0"]
+frame = 0
+
 [node name="Córdex" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1690.41, 331.027 )
-frame = 5
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -263,6 +265,8 @@ arrow_margin_from_center = 247
 margin_right = 3522.0
 text = "Ocorre um erro"
 arrow_margin_from_center = 93
+
+[editable path="Elevator"]
 
 [editable path="Player"]
 

@@ -3,9 +3,6 @@
 [ext_resource path="res://Sprites/Objects/InteractableItems/Elevator/elevator.png" type="Texture" id=1]
 [ext_resource path="res://Source/InteractableItems/Elevator/Elevator.gd" type="Script" id=2]
 
-
-
-
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 106, 134 )
@@ -23,7 +20,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 37.5096, 34.6852 )
+extents = Vector2( 39.3701, 53.5603 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 53.0751, 6.35139 )
@@ -41,12 +38,13 @@ distance = 240
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 18.5328 )
+position = Vector2( 0.840897, 0.0330753 )
 shape = SubResource( 4 )
 
 [node name="Shape1" type="CollisionShape2D" parent="."]

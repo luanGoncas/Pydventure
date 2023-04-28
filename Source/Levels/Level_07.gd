@@ -15,10 +15,31 @@ func _ready():
 	$Elevator.instruction = $Player/Scroll/Label
 	$Elevator.instruction2 = $Player/Scroll/Label2
 	$Elevator.instruction3 = $Player/Scroll/Label3
+	
+	get_node("Platforms/Platform/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform2/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform3/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform4/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform5/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform6/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform7/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform8/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform9/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform10/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform11/StaticBody2D/CollisionShape2D").disabled = true
+	get_node("Platforms/Platform12/StaticBody2D/CollisionShape2D").disabled = true
+	
 	pass
 
 func _process(delta):
-	
+	if get_node("PositionFlag").elevator_has_passed:
+		get_node("Platforms/Platform").show()
+		get_node("Platforms/Platform/StaticBody2D/CollisionShape2D").disabled = false
+		get_node("Platforms/Platform2").show()
+		get_node("Platforms/Platform2/StaticBody2D/CollisionShape2D").disabled = false
+		get_node("Platforms/Platform3").show()
+		get_node("Platforms/Platform3/StaticBody2D/CollisionShape2D").disabled = false
+		
 	# Checks if the player is inside the elevator
 	if get_node("Elevator").player_entered:
 		$Player.motion.y = $Elevator.move.y # Syncronizes player and elevator movements
@@ -47,16 +68,17 @@ func question_change(level):
 			if $Player/QuestionBoxes/QuestionBox2.chosen_option2:
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox2.hide()
+				#get_node("Platform2").show()
+				#get_node("Platform2/StaticBody2D/CollisionShape2D").disabled = false
 				if !interactable_question_02:
 					PlayerData.score += score_quiz
 					interactable_question_02 = true
 			if $Player/QuestionBoxes/QuestionBox2.chosen_option or $Player/QuestionBoxes/QuestionBox2.chosen_option3:
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")
-#			if not $Player/QuestionBoxes/QuestionBox2.chosen_option:
-#				get_node("Elevator").wrong_answer = true
-#				$Player/QuestionBoxes/QuestionBox2.hide()
 		2:
 			if not $Player/QuestionBoxes/QuestionBox3.visible:
+				#get_node("Platform3").show()
+				#get_node("Platform3/StaticBody2D/CollisionShape2D").disabled = false
 				$Player/QuestionBoxes/QuestionBox3/VBoxContainer/VBoxContainer/Option1.grab_focus()
 				$Player/QuestionBoxes/QuestionBox3.show()
 			if $Player/QuestionBoxes/QuestionBox3.chosen_option3:

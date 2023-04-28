@@ -43,9 +43,9 @@ func _input(event):
 				instruction3.show() # Writes code at the scroll
 			
 			# Debugging prints only
-#			print(move.x)
-#			print(move.y)
-#			print(level_at)
+			print(move.x)
+			print(move.y)
+			print(level_at)
 			right_answer = false
 		if wrong_answer:
 			level_at = 0
