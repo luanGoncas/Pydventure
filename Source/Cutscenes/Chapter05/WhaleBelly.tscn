@@ -1,12 +1,8 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_sum2.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_sub_transparent.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_div_transparent.png" type="Texture" id=4]
 [ext_resource path="res://Source/Cutscenes/Chapter05/WhaleBelly.gd" type="Script" id=5]
 [ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Sprites/Objects/InteractableItems/Cauldrons/cauldron_mult_transparent.png" type="Texture" id=7]
 [ext_resource path="res://Source/GuiderVanRossum/GuiderVanRossum.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=9]
 [ext_resource path="res://Source/Player/PlayerCutsceneIdle.tscn" type="PackedScene" id=10]
@@ -29,56 +25,30 @@ position = Vector2( 319.453, 179.863 )
 scale = Vector2( 0.992802, 0.743205 )
 texture = ExtResource( 9 )
 
-[node name="cauldron_sum2" type="Sprite" parent="."]
-position = Vector2( 751.504, 234.879 )
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 1.17931, 17.0663, 30.9827, 32.5716 )
-
 [node name="Cauldron" parent="." instance=ExtResource( 13 )]
 position = Vector2( 421.437, 232.822 )
-frame = 4
+frame = 3
 playing = true
 object_target = ExtResource( 17 )
 
 [node name="Cauldron2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 389.511, 232.869 )
-frame = 3
+frame = 2
 playing = true
 object_target = ExtResource( 16 )
 
 [node name="Cauldron3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 357.446, 233.123 )
-frame = 3
+frame = 2
 object_target = ExtResource( 17 )
 
 [node name="Cauldron4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 453.478, 232.216 )
-frame = 1
 playing = true
 object_target = ExtResource( 16 )
 
-[node name="cauldron_sub_transparent" type="Sprite" parent="."]
-position = Vector2( 784.71, 235.106 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 32.162, 17.0663, 32.5716, 33.366 )
-
-[node name="cauldron_mult_transparent" type="Sprite" parent="."]
-position = Vector2( 818.159, 235.505 )
-texture = ExtResource( 7 )
-region_enabled = true
-region_rect = Rect2( 65.1308, 17.0663, 30.5855, 32.1744 )
-
-[node name="cauldron_div_transparent" type="Sprite" parent="."]
-position = Vector2( 851.057, 235.206 )
-texture = ExtResource( 4 )
-region_enabled = true
-region_rect = Rect2( 95.7163, 15.4774, 32.9688, 34.9549 )
-
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 8 )]
 position = Vector2( 537.84, 241.194 )
-frame = 2
 flip_h = true
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 10 )]
@@ -92,9 +62,9 @@ texture = ExtResource( 15 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2346.04
+margin_left = -2348.12
 margin_top = 21.9472
-margin_right = 2351.96
+margin_right = 2349.88
 margin_bottom = 100.947
 __meta__ = {
 "_edit_use_anchors_": false
@@ -106,24 +76,24 @@ margin_bottom = 206.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 2381.0
-margin_right = 2956.0
+margin_left = 2384.0
+margin_right = 2953.0
 margin_bottom = 206.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Após a missão de introdução, o protagonista entra nas masmorras mais profundas do castelo,
-na qual se depara com diversos caldeirões e poções, além de mais pinturas na parede. Guider,
-antes de deixar o protagonista, o orienta e diz que operações matemáticas são essenciais na
-linguagem Python, e naquele castelo os caldeirões eram responsáveis por isso. Para escrever o
-código em Python no pergaminho, que continua a acompanhá-lo, Guider afirma que o protago-
-nista deve pegar as poções próximas aos caldeirões, jogar neles, e pegar a poção resultante. A
-partir daí, o mentor afirma que o protagonista deve tocar as pinturas para registar o resul-
-tado e gerar o código no pergaminho. Faça isso, e lembre-se: A porta só poderá ser aberta ao
-cumprir TODOS os desafios da sala!
+text = "Após a missão de introdução, o protagonista entra nas masmorras mais profundas do
+castelo, na qual se depara com diversos caldeirões e poções, além de mais pinturas na
+parede. Guider, antes de deixar o protagonista, o orienta e diz que operações matemáticas
+são essenciais na linguagem Python, e naquele castelo os caldeirões eram responsáveis por
+isso. Para escrever o código em Python no pergaminho, que continua a acompanhá-lo, Guider
+afirma que o protagonista deve pegar as poções próximas aos caldeirões, jogar neles, e pegar
+a poção resultante. A partir daí, o mentor afirma que o protagonista deve tocar as pinturas
+para registrar o resultado e gerar o código no pergaminho. Faça isso, e lembre-se: A porta
+só poderá ser aberta ao cumprir TODOS os desafios da sala!
 
-E - Interagir   Espaço - Pular"
+ E - Interagir   Espaço - Pular"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 210.0

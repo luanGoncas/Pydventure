@@ -20,58 +20,58 @@ scale = Vector2( 0.992802, 0.743205 )
 texture = ExtResource( 7 )
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 138.339, 257.883 )
-frame = 4
+position = Vector2( 149.451, 273.757 )
+frame = 0
 
 [node name="Córdex" parent="." instance=ExtResource( 3 )]
-position = Vector2( 503.108, 230.653 )
-frame = 3
+position = Vector2( 514.22, 246.527 )
+frame = 7
 flip_h = true
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 4 )]
-position = Vector2( 81.5681, 241.144 )
+position = Vector2( 92.6799, 257.018 )
 animation = "hurt"
 frame = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2342.66
-margin_top = 14.8975
-margin_right = 2355.34
-margin_bottom = 93.8969
+margin_left = -2344.66
+margin_top = 23.6282
+margin_right = 2353.34
+margin_bottom = 102.628
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_right = 5338.0
-margin_bottom = 180.0
+margin_bottom = 187.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 2379.0
-margin_top = 6.0
-margin_right = 2958.0
-margin_bottom = 174.0
+margin_left = 2385.0
+margin_right = 2952.0
+margin_bottom = 187.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Quando finalmente consegue superar o desafio da roldana, algo inesperado acontece: Guider
-Van Rossum recebe um feitiço de alguém desconhecido. É ele, ninguém mais, ninguém menos, que
-Córdex, O Feiticeiro do Loop Infinito! Ele quer impedir o protagonista de encarar os seus pró-
-prios conhecimentos de frente, e por isso neutralizou o mago para que ele não o instrua ao re-
-alizar o laço de repetição 'for' na próxima sala. Ele está conjurando um feitiço que fará você
-voltar para o início desta sala caso erre as perguntas! E ainda fará você perder pontos! Con-
-fronte Córdex ao responder todas as perguntas feitas dentro do elevador enfeitiçado!
+Van Rossum recebe um feitiço de alguém desconhecido. É ele, ninguém mais, ninguém menos,
+que Córdex, O Feiticeiro do Loop Infinito! Ele quer impedir o protagonista de encarar os seus
+próprios conhecimentos de frente, e por isso neutralizou o mago para que ele não o instrua
+ao realizar o laço de repetição 'for' na próxima sala. Ele está conjurando um feitiço que
+fará você voltar para o início desta sala caso erre as perguntas! E ainda fará você perder
+pontos! Confronte Córdex ao responder todas as perguntas feitas dentro do elevador
+enfeitiçado!
 
 E - Interagir com o Elevador   Enter - Escolher Resposta"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 184.0
+margin_top = 191.0
 margin_right = 5338.0
-margin_bottom = 364.0
+margin_bottom = 371.0
 rect_min_size = Vector2( 0, 180 )
 alignment = 1
 

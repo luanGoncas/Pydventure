@@ -37,84 +37,84 @@ region = Rect2( 342, 0, 57, 105 )
 atlas = ExtResource( 1 )
 region = Rect2( 399, 0, 57, 105 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
 region = Rect2( 126, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
 region = Rect2( 252, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
 region = Rect2( 378, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
 region = Rect2( 504, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 2 )
 region = Rect2( 630, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 2 )
 region = Rect2( 756, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 2 )
 region = Rect2( 882, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 2 )
 region = Rect2( 1008, 0, 126, 141 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 104, 122 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 3 )
 region = Rect2( 104, 0, 104, 122 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 3 )
 region = Rect2( 208, 0, 104, 122 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 3 )
 region = Rect2( 312, 0, 104, 122 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 3 )
 region = Rect2( 416, 0, 104, 122 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 3 )
 region = Rect2( 520, 0, 104, 122 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 3 )
 region = Rect2( 624, 0, 104, 122 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=25]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "casting_spell",
 "speed": 7.0
 }, {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
-"loop": true,
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": false,
 "name": "death",
 "speed": 7.0
 } ]
@@ -122,7 +122,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 33.7338, 71.5082 )
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=27]
 resource_name = "casting_spell"
 length = 1.35
 loop = true
@@ -152,7 +152,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=28]
 resource_name = "death"
 length = 1.05
 tracks/0/type = "value"
@@ -180,8 +180,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6 ]
 }
 
-[sub_resource type="Animation" id=27]
-resource_name = "idle"
+[sub_resource type="Animation" id=29]
 length = 1.05
 loop = true
 step = 0.15
@@ -215,18 +214,18 @@ collision_layer = 2
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 9 )
+frames = SubResource( 25 )
 animation = "casting_spell"
-frame = 6
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 26 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/casting_spell = SubResource( 28 )
-anims/death = SubResource( 29 )
-anims/idle = SubResource( 27 )
+anims/casting_spell = SubResource( 27 )
+anims/death = SubResource( 28 )
+anims/idle = SubResource( 29 )
 [connection signal="body_entered" from="." to="." method="_on_Crdex_2_player_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Crdex_2_player_exited"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

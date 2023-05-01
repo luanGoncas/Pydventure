@@ -24,9 +24,9 @@ texture = ExtResource( 5 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1439.32
+margin_left = -1444.69
 margin_top = -20.9624
-margin_right = 1444.68
+margin_right = 1439.31
 margin_bottom = 58.0376
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,19 +38,19 @@ margin_bottom = 180.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 1471.0
+margin_left = 1483.0
 margin_top = 44.0
-margin_right = 2052.0
+margin_right = 2040.0
 margin_bottom = 136.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "O protagonista se questiona se o e-mail misterioso foi uma técnica de coleta de dados, mas a-
-paga o e-mail e vai dormir. No dia seguinte, ele percebe que não conseguirá estudar a tempo
-para a prova de programação, mas decide verificar o e-mail novamente e recebe um convite pa-
-ra uma jornada de aprendizado. Ele aceita, mas seu computador desliga e ele é sugado por
-um portal."
+text = "O protagonista se questiona se o e-mail misterioso foi uma técnica de coleta de dados, mas
+apaga o e-mail e vai dormir. No dia seguinte, ele percebe que não conseguirá estudar a
+tempo para a prova de programação, mas decide verificar o e-mail novamente e recebe um
+convite para uma jornada de aprendizado. Ele aceita, mas seu computador desliga e ele é
+sugado por um portal."
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 184.0

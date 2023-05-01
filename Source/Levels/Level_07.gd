@@ -1,6 +1,6 @@
 extends Node2D
 
-export var score_quiz = 25 # Answer correct default score value
+export var score_quiz: int = 25 # Answer correct default score value
 
 # Question interaction verifiers
 var interactable_question_01: bool = false
@@ -39,10 +39,15 @@ func question_change(level):
 			if $Player/QuestionBoxes/QuestionBox.chosen_option:
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox.hide()
-				if !interactable_question_01:
+				if !interactable_question_01 and !SceneChanger.interactable_question_01:
 					PlayerData.score += score_quiz
 					interactable_question_01 = true
+					SceneChanger.interactable_question_01 = true
 			if $Player/QuestionBoxes/QuestionBox.chosen_option2 or $Player/QuestionBoxes/QuestionBox.chosen_option3:
+				if PlayerData.score - score_quiz < 0:
+					PlayerData.score = 0
+				else:
+					PlayerData.score -= score_quiz
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")
 		1:
 			if not $Player/QuestionBoxes/QuestionBox2.visible:
@@ -51,30 +56,33 @@ func question_change(level):
 			if $Player/QuestionBoxes/QuestionBox2.chosen_option2:
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox2.hide()
-				#get_node("Platform2").show()
-				#get_node("Platform2/StaticBody2D/CollisionShape2D").disabled = false
-				if !interactable_question_02:
+				if !interactable_question_02 and !SceneChanger.interactable_question_02:
 					PlayerData.score += score_quiz
 					interactable_question_02 = true
+					SceneChanger.interactable_question_02 = true
 			if $Player/QuestionBoxes/QuestionBox2.chosen_option or $Player/QuestionBoxes/QuestionBox2.chosen_option3:
+				if PlayerData.score - score_quiz < 0:
+					PlayerData.score = 0
+				else:
+					PlayerData.score -= score_quiz
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")
 		2:
 			if not $Player/QuestionBoxes/QuestionBox3.visible:
-				#get_node("Platform3").show()
-				#get_node("Platform3/StaticBody2D/CollisionShape2D").disabled = false
 				$Player/QuestionBoxes/QuestionBox3/VBoxContainer/VBoxContainer/Option1.grab_focus()
 				$Player/QuestionBoxes/QuestionBox3.show()
 			if $Player/QuestionBoxes/QuestionBox3.chosen_option3:
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox3.hide()
-				if !interactable_question_03:
+				if !interactable_question_03 and !SceneChanger.interactable_question_03:
 					PlayerData.score += score_quiz
 					interactable_question_03 = true
+					SceneChanger.interactable_question_03 = true
 			if $Player/QuestionBoxes/QuestionBox3.chosen_option or $Player/QuestionBoxes/QuestionBox3.chosen_option2:
+				if PlayerData.score - score_quiz < 0:
+					PlayerData.score = 0
+				else:
+					PlayerData.score -= score_quiz
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")
-#			if not $Player/QuestionBoxes/QuestionBox3.chosen_option:
-#				get_node("Elevator").wrong_answer = true
-#				$Player/QuestionBoxes/QuestionBox3.hide()
 		3:
 			if not $Player/QuestionBoxes/QuestionBox4.visible:
 				$Player/QuestionBoxes/QuestionBox4/VBoxContainer/VBoxContainer/Option1.grab_focus()
@@ -82,14 +90,16 @@ func question_change(level):
 			if $Player/QuestionBoxes/QuestionBox4.chosen_option:
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox4.hide()
-				if !interactable_question_04:
+				if !interactable_question_04 and !SceneChanger.interactable_question_04:
 					PlayerData.score += score_quiz
 					interactable_question_04 = true
+					SceneChanger.interactable_question_04 = true
 			if $Player/QuestionBoxes/QuestionBox4.chosen_option2 or $Player/QuestionBoxes/QuestionBox4.chosen_option3:
+				if PlayerData.score - score_quiz < 0:
+					PlayerData.score = 0
+				else:
+					PlayerData.score -= score_quiz
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")
-#			if not $Player/QuestionBoxes/QuestionBox4.chosen_option:
-#				get_node("Elevator").wrong_answer = true
-#				$Player/QuestionBoxes/QuestionBox4.hide()
 		4:
 			if not $Player/QuestionBoxes/QuestionBox5.visible:
 				$Player/QuestionBoxes/QuestionBox5/VBoxContainer/VBoxContainer/Option1.grab_focus()
@@ -97,8 +107,13 @@ func question_change(level):
 			if $Player/QuestionBoxes/QuestionBox5.chosen_option:
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox5.hide()
-				if !interactable_question_05:
+				if !interactable_question_05 and !SceneChanger.interactable_question_05:
 					PlayerData.score += score_quiz
 					interactable_question_05 = true
+					SceneChanger.interactable_question_05 = true
 			if $Player/QuestionBoxes/QuestionBox5.chosen_option2 or $Player/QuestionBoxes/QuestionBox5.chosen_option3:
+				if PlayerData.score - score_quiz < 0:
+					PlayerData.score = 0
+				else:
+					PlayerData.score -= score_quiz
 				SceneChanger.change_scene("res://Source/Levels/Level_07.tscn")

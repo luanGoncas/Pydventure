@@ -28,25 +28,25 @@ texture = ExtResource( 5 )
 position = Vector2( 389, 204 )
 scale = Vector2( 0.5, 0.5 )
 animation = "spin"
-frame = 6
+frame = 7
 playing = true
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 7 )]
 position = Vector2( 570, 241 )
-frame = 1
+frame = 0
 flip_h = true
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 6 )]
 position = Vector2( 80, 270 )
-frame = 5
+frame = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2341.79
-margin_top = -5.7266
-margin_right = 2356.21
-margin_bottom = 73.2728
+margin_left = -2351.79
+margin_top = -3.7266
+margin_right = 2346.21
+margin_bottom = 75.2728
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -57,21 +57,21 @@ margin_bottom = 180.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 2376.0
+margin_left = 2389.0
 margin_top = 25.0
-margin_right = 2962.0
+margin_right = 2949.0
 margin_bottom = 155.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Guider Van Rossum parabeniza o protagonista, e o avisa de que a etapa mais desafiadora es-
-tá por vir, mas antes a última estrutura a ser aprendida: Laços de repetição. Segundo o men-
-tor, laços de repetição são instruções de fluxo que são executadas repetidamente dada uma de-
-terminada condição. Com isso em mente, ele diz que a tarefa do protagonista, para gerar o có-
-digo no pergaminho, e pegar a poção da sala, ativar a roldana, e acertar o baú contendo a
-mesma poção coletada. Errar o baú fará com que pontos sejam perdidos, então cuidado! E lem-
-bre-se: A porta só poderá ser aberta ao cumprir TODOS os desafios da sala!"
+text = "Guider Van Rossum parabeniza o protagonista, e o avisa de que a etapa mais desafiadora
+está por vir, mas antes a última estrutura a ser aprendida: Laços de repetição. Segundo o
+mentor, laços de repetição são instruções de fluxo que são executadas repetidamente dada
+uma determinada condição. Com isso em mente, ele diz que a tarefa do protagonista, para
+gerar o código no pergaminho, e pegar a poção da sala, ativar a roldana, e acertar o baú
+contendo a mesma poção coletada. Errar o baú fará com que pontos sejam perdidos, então
+cuidado! E lembre-se: A porta só poderá ser aberta ao cumprir TODOS os desafios da sala!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 184.0

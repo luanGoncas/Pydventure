@@ -33,16 +33,15 @@ texture = ExtResource( 5 )
 [node name="Balance_If_Else" parent="." instance=ExtResource( 3 )]
 position = Vector2( 356.379, 194.186 )
 animation = "action"
-frame = 6
 playing = true
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 8 )]
 position = Vector2( 113.616, 247.834 )
-frame = 5
+frame = 7
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 7 )]
 position = Vector2( 533.318, 224.077 )
-frame = 2
+frame = 4
 flip_h = true
 
 [node name="scroll_big_transparent" type="Sprite" parent="."]
@@ -52,10 +51,10 @@ texture = ExtResource( 10 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2346.38
-margin_top = -5.48825
-margin_right = 2351.62
-margin_bottom = 73.5111
+margin_left = -2349.38
+margin_top = -1.48825
+margin_right = 2348.62
+margin_bottom = 77.5111
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,21 +65,21 @@ margin_bottom = 180.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 2379.0
+margin_left = 2384.0
 margin_top = 25.0
-margin_right = 2959.0
+margin_right = 2953.0
 margin_bottom = 155.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Após o protagonista seguir viagem e entrar em uma nova sala, Guider Van Rossum aparece no-
-vamente e diz que nessa sala será aprendido o conceito de operadores relacionais, já que em
-Python é extremamente importante a comparação de grandezas. O mentor explica que as balan-
-ças na sala usarão as poções, que são os valores, para trabalhar e informar uma verdade ou
-uma falsidade, e escrever o código no pergaminho. Para isso, o protagonista deve pegar as po-
-ções e inserí-las nas balanças dispostas na sala. Faça isso, e lembre-se: A porta só poderá ser
-aberta ao cumprir TODOS os desafios da sala!"
+text = "Após o protagonista seguir viagem e entrar em uma nova sala, Guider Van Rossum aparece
+novamente e diz que nessa sala será aprendido o conceito de operadores relacionais, já que
+em Python é extremamente importante a comparação de grandezas. O mentor explica que as
+balanças na sala usarão as poções, que são os valores, para trabalhar e informar uma
+verdade ou uma falsidade, e escrever o código no pergaminho. Para isso, o protagonista deve
+pegar as poções e inserí-las nas balanças dispostas na sala. Faça isso, e lembre-se: A porta
+só poderá ser aberta ao cumprir TODOS os desafios da sala!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 184.0

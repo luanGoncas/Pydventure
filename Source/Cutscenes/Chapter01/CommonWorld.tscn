@@ -24,10 +24,10 @@ texture = ExtResource( 4 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1439.23
-margin_top = -10.8263
-margin_right = 1444.77
-margin_bottom = 68.1737
+margin_left = -1446.85
+margin_top = -10.9954
+margin_right = 1437.15
+margin_bottom = 68.0046
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -38,20 +38,20 @@ margin_bottom = 180.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 1471.0
+margin_left = 1482.0
 margin_top = 34.0
-margin_right = 2052.0
+margin_right = 2042.0
 margin_bottom = 145.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "É de vital importância a informação na atualidade, e a programação é uma habilidade funda-
-mental para muitas profissões do futuro. O protagonista, entusiasmado com essa perspectiva,
-começa a estudar programação, mas logo se vê frustrado com a complexidade e falta de lógica
-do assunto. Ele sofre com a ansiedade e queda de rendimento em outras tarefas, e seus amigos
-o aconselham a desistir do curso. Ao final de uma frustada jornada de estudos, o protagonis-
-ta verifica sua caixa de e-mail, com muitas dúvidas em mente."
+text = "É de vital importância a informação na atualidade, e a programação é uma habilidade
+fundamental para muitas profissões do futuro. O protagonista, entusiasmado com essa
+perspectiva, começa a estudar programação, mas logo se vê frustrado com a complexidade e
+falta de lógica do assunto. Ele sofre com a ansiedade e queda de rendimento em outras
+tarefas, e seus amigos o aconselham a desistir do curso. Ao final de uma frustada jornada
+de estudos, o protagonista verifica sua caixa de e-mail, com muitas dúvidas em mente."
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 184.0

@@ -28,12 +28,12 @@ region_rect = Rect2( 1387.02, 1, 128, 92 )
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 6 )]
 position = Vector2( 540.23, 240.416 )
-frame = 6
+frame = 0
 flip_h = true
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 5 )]
 position = Vector2( 101.938, 269.948 )
-frame = 0
+frame = 2
 
 [node name="scroll_big_transparent" type="Sprite" parent="."]
 position = Vector2( 248.987, 251.099 )
@@ -42,10 +42,10 @@ texture = ExtResource( 8 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2338.2
-margin_top = 19.7868
-margin_right = 2359.8
-margin_bottom = 98.7863
+margin_left = -2346.67
+margin_top = 21.9057
+margin_right = 2351.33
+margin_bottom = 100.905
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -56,23 +56,23 @@ margin_bottom = 206.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 2373.0
-margin_right = 2965.0
+margin_left = 2382.0
+margin_right = 2955.0
 margin_bottom = 206.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "O protagonista e Guider entram no castelo e chegam a uma sala principal onde é explicado que
-linguagem de programação é algo análogo aos idiomas, como português e inglês, mas que, dife-
-rente dos humanos, serve para se comunicar com o computador. Van Rossum avisa de que o pro-
-tagonista possui um pergaminho em mãos e, então, o instrui a criar seu primeiro programa usan-
-do a linguagem Python, que será o famoso programa \"Hello World!\". O protagonista entra em u-
-ma nova sala onde vê um tinteiro e uma pintura próxima. Guider explica que a função \"print\"
-em Python exibe informações para uma pessoa. Segundo ele, o protagonista deve pegar o tintei-
-ro para escrever essa mensagem na pintura para que o pergaminho gere o código desejado. Fa-
-ça isto, e lembre-se: A porta só poderá ser aberta ao cumprir TODOS os desafios da sala!
-
+text = "O protagonista e Guider entram no castelo e chegam a uma sala principal onde é explicado
+que linguagem de programação é algo análogo aos idiomas, como português e inglês, mas que,
+diferente dos humanos, serve para se comunicar com o computador. Van Rossum avisa de que
+o protagonista possui um pergaminho em mãos e, então, o instrui a criar seu primeiro
+programa usando a linguagem Python, que será o famoso programa \"Hello World!\". O
+protagonista entra em uma nova sala onde vê um tinteiro e uma pintura próxima. Guider
+explica que a função \"print\" em Python exibe informações para uma pessoa. Segundo ele, o
+protagonista deve pegar o tinteiro para escrever essa mensagem na pintura para que o
+pergaminho gere o código desejado. Faça isto, e lembre-se: A porta só poderá ser aberta ao
+cumprir TODOS os desafios da sala!
 E - Interagir   Espaço - Pular"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]

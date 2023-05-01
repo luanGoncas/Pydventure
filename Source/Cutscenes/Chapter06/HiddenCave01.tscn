@@ -29,11 +29,11 @@ texture = ExtResource( 2 )
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 8 )]
 position = Vector2( 124.832, 243.149 )
-frame = 6
+frame = 2
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 7 )]
 position = Vector2( 534.554, 216.597 )
-frame = 2
+frame = 6
 flip_h = true
 
 [node name="scroll_big_transparent" type="Sprite" parent="."]
@@ -42,23 +42,23 @@ texture = ExtResource( 11 )
 
 [node name="Chest" parent="." instance=ExtResource( 10 )]
 position = Vector2( 368.803, 204.423 )
-frame = 3
+frame = 2
 playing = true
 object_scene = ExtResource( 4 )
 
 [node name="Chest2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 409.236, 204.423 )
-frame = 2
+frame = 1
 playing = true
 object_scene = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2346.38
-margin_top = -13.5006
-margin_right = 2351.62
-margin_bottom = 65.4988
+margin_left = -2347.38
+margin_top = -0.70071
+margin_right = 2350.62
+margin_bottom = 78.2987
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,20 +69,21 @@ margin_bottom = 180.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 2378.0
-margin_top = 34.0
-margin_right = 2959.0
-margin_bottom = 145.0
+margin_left = 2385.0
+margin_top = 25.0
+margin_right = 2953.0
+margin_bottom = 155.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Ao adentrar uma nova sala, o mentor avisa que o protagonista aprenderá o conceito de variá-
-veis. Segundo ele, variáveis são estruturas que armazenam algo de valor. O mago diz que para
-escrever, no seu pergaminho, um código que use uma variável, o protagonista precisará colocar
-uma poção, que, como visto na sala de operações matemáticas, representam números no castelo,
-e copiar de um baú para o outro, já que neste castelo as variáveis são os baús. Faça isto, e
-lembre-se: A porta só poderá ser aberta ao cumprir TODOS os desafios da sala!"
+text = "Ao adentrar uma nova sala, o mentor avisa que o protagonista aprenderá o conceito de
+variáveis. Segundo ele, variáveis são estruturas que armazenam algo de valor. O mago diz
+que para escrever, no seu pergaminho, um código que use uma variável, o protagonista
+precisará colocar uma poção, que, como visto na sala de operações matemáticas, representam
+números no castelo, e copiar de um baú para o outro, já que neste castelo as variáveis são
+os baús. Faça isto, e lembre-se: A porta só poderá ser aberta ao cumprir TODOS os desafios
+da sala!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 184.0

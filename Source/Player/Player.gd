@@ -59,4 +59,4 @@ func _physics_process(delta):
 
 # Score UI function
 func update_interface() -> void:
-	$Score.text = "Score: %s" % PlayerData.score
+	$Score.text = "Pontos: %s" % PlayerData.score

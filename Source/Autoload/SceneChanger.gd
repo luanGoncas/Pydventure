@@ -5,6 +5,13 @@ signal scene_changed()
 onready var animation_player = $AnimationPlayer
 onready var black = $Control/Black
 
+# Question interaction verifiers
+var interactable_question_01: bool = false
+var interactable_question_02: bool = false
+var interactable_question_03: bool = false
+var interactable_question_04: bool = false
+var interactable_question_05: bool = false
+
 func change_scene(path, delay = 0.5):
 	yield(get_tree().create_timer(delay), "timeout")
 	animation_player.play("fade")
