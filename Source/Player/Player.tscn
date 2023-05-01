@@ -37,9 +37,9 @@ animations = [ {
 "name": "Idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Run",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 13 ) ],
@@ -47,9 +47,9 @@ animations = [ {
 "name": "Fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "Run",
+"name": "Jump",
 "speed": 10.0
 } ]
 

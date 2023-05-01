@@ -36,6 +36,7 @@ position = Vector2( 1687.72, 313.514 )
 
 [node name="AnimatedSprite" parent="Córdex_2" index="0"]
 animation = "casting_spell"
+frame = 7
 playing = true
 flip_h = true
 
