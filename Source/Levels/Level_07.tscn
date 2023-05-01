@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Source/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Source/InteractableItems/Elevator/Elevator.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Source/Levels/Level_07.gd" type="Script" id=6]
 [ext_resource path="res://Source/Córdex/Córdex_2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Source/InteractableItems/Levers/Lever.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/InteractableItems/Doors/Door.tscn" type="PackedScene" id=9]
 
 [node name="Level_07" type="Node2D"]
 script = ExtResource( 6 )
@@ -34,8 +35,12 @@ position = Vector2( 1030.05, 1373.17 )
 position = Vector2( 1687.72, 313.514 )
 
 [node name="AnimatedSprite" parent="Córdex_2" index="0"]
-frame = 5
+animation = "casting_spell"
+playing = true
 flip_h = true
+
+[node name="Door" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1825.88, 356.936 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 196.644, 1557.99 )
