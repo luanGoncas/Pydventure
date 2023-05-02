@@ -49,3 +49,11 @@ func _on_TextureButton_focus_exited():
 func _on_TextureButton_mouse_entered():
 	grab_focus()
 	pass # Replace with function body.
+
+
+func _on_Next_pressed():
+	pass # Replace with function body.
+
+
+func _on_Next2_pressed():
+	pass # Replace with function body.

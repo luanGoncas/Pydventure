@@ -1,6 +1,7 @@
 extends Node2D
 
-export var score_quiz: int = 25 # Answer correct default score value
+export var score_quiz_right: int = 40 # Answer correct default score value
+export var score_quiz_wrong: int = -100 # Wrong nswer default decrement score value
 
 # Question interaction verifiers
 var interactable_question_01: bool = false
@@ -33,6 +34,10 @@ func _process(delta):
 	if get_node("Córdex_2").dead:
 		get_node("Córdex_2/AnimatedSprite").hide()
 		get_node("Córdex_2/CollisionShape2D").disabled = true
+		get_node("Door").level_clear = true
+	
+	if get_node("Door").door_open:
+		SceneChanger.change_scene("res://Source/Cutscenes/Chapter11/Ending.tscn")
 	
 # Questions method
 func question_change(level):
@@ -46,11 +51,11 @@ func question_change(level):
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox.hide()
 				if !interactable_question_01 and !SceneChanger.interactable_question_01:
-					PlayerData.score += score_quiz
+					PlayerData.score += score_quiz_right
 					interactable_question_01 = true
 					SceneChanger.interactable_question_01 = true
 			if $Player/QuestionBoxes/QuestionBox.chosen_option2 or $Player/QuestionBoxes/QuestionBox.chosen_option3:
-				PlayerData.score -= score_quiz
+				PlayerData.score += score_quiz_wrong
 				wrong_answer = true
 		1:
 			if not $Player/QuestionBoxes/QuestionBox2.visible:
@@ -61,11 +66,11 @@ func question_change(level):
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox2.hide()
 				if !interactable_question_02 and !SceneChanger.interactable_question_02:
-					PlayerData.score += score_quiz
+					PlayerData.score += score_quiz_right
 					interactable_question_02 = true
 					SceneChanger.interactable_question_02 = true
 			if $Player/QuestionBoxes/QuestionBox2.chosen_option or $Player/QuestionBoxes/QuestionBox2.chosen_option3:
-				PlayerData.score -= score_quiz
+				PlayerData.score += score_quiz_wrong
 				wrong_answer = true
 		2:
 			if not $Player/QuestionBoxes/QuestionBox3.visible:
@@ -76,11 +81,11 @@ func question_change(level):
 				get_node("Elevator").right_answer = true
 				$Player/QuestionBoxes/QuestionBox3.hide()
 				if !interactable_question_03 and !SceneChanger.interactable_question_03:
-					PlayerData.score += score_quiz
+					PlayerData.score += score_quiz_right
 					interactable_question_03 = true
 					SceneChanger.interactable_question_03 = true
 			if $Player/QuestionBoxes/QuestionBox3.chosen_option or $Player/QuestionBoxes/QuestionBox3.chosen_option2:
-				PlayerData.score -= score_quiz
+				PlayerData.score += score_quiz_wrong
 				wrong_answer = true
 		3:
 			if not $Player/QuestionBoxes/QuestionBox4.visible:
@@ -91,11 +96,11 @@ func question_change(level):
 				wrong_answer = false
 				$Player/QuestionBoxes/QuestionBox4.hide()
 				if !interactable_question_04 and !SceneChanger.interactable_question_04:
-					PlayerData.score += score_quiz
+					PlayerData.score += score_quiz_right
 					interactable_question_04 = true
 					SceneChanger.interactable_question_04 = true
 			if $Player/QuestionBoxes/QuestionBox4.chosen_option2 or $Player/QuestionBoxes/QuestionBox4.chosen_option3:
-				PlayerData.score -= score_quiz
+				PlayerData.score += score_quiz_wrong
 				wrong_answer = true
 		4:
 			if not $Player/QuestionBoxes/QuestionBox5.visible:
@@ -106,9 +111,9 @@ func question_change(level):
 				wrong_answer = false
 				$Player/QuestionBoxes/QuestionBox5.hide()
 				if !interactable_question_05 and !SceneChanger.interactable_question_05:
-					PlayerData.score += score_quiz
+					PlayerData.score += score_quiz_right
 					interactable_question_05 = true
 					SceneChanger.interactable_question_05 = true
 			if $Player/QuestionBoxes/QuestionBox5.chosen_option2 or $Player/QuestionBoxes/QuestionBox5.chosen_option3:
-				PlayerData.score -= score_quiz
+				PlayerData.score += score_quiz_wrong
 				wrong_answer = true

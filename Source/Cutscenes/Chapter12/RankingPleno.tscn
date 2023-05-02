@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Source/Cutscenes/CutsceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Player/PlayerCutsceneIdle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Objects/NonInteractableItems/Shields/pleno_performance_transparent.png" type="Texture" id=3]
+[ext_resource path="res://Source/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sprites/Scenes/text_box__transparent.png" type="Texture" id=5]
+[ext_resource path="res://Source/Cutscenes/Chapter12/RankingPleno.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[node name="RankingPleno" type="Node"]
+script = ExtResource( 6 )
+
+[node name="text_box__transparent" type="Sprite" parent="."]
+position = Vector2( 319.453, 179.863 )
+scale = Vector2( 0.992802, 0.743205 )
+texture = ExtResource( 5 )
+
+[node name="pleno_performance_transparent" type="Sprite" parent="."]
+position = Vector2( 321.5, 156.713 )
+texture = ExtResource( 3 )
+
+[node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 111.576, 271.536 )
+frame = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2349.96
+margin_top = -23.5725
+margin_right = 2348.04
+margin_bottom = 55.4272
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 5338.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 2383.0
+margin_top = 44.0
+margin_right = 2954.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Você foi classificado como um programador PLENO! Parabéns! Isso mostra que você já tem um
+bom domínio dos conceitos de programação, mas nunca pare de buscar melhorar. Use essa
+experiência como um incentivo para continuar estudando e aperfeiçoando suas habilidades, e
+se esforce ainda mais para atingir seus objetivos na próxima vez. É certeza de que você será
+ainda mais bem-sucedido em suas próximas tentativas!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 5338.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 0, 180 )
+alignment = 1
+
+[node name="Next" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 68.0
+margin_right = 5338.0
+margin_bottom = 88.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Voltar ao Menu Principal"
+arrow_margin_from_center = 112
+
+[node name="Next2" parent="VBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 92.0
+margin_right = 5338.0
+margin_bottom = 112.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+text = "Sair"
+arrow_margin_from_center = 50
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Next2" to="." method="_on_Next2_pressed"]
