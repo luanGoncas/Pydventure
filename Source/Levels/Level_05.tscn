@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Source/Levels/Level_05.gd" type="Script" id=1]
 [ext_resource path="res://Source/InteractableItems/Balances/Balance_If_Else_Diamond_Else.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Sprites/Backgrounds/sala_if.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Objects/InteractableItems/Potions/green_potion_transparent.png" type="Texture" id=11]
 [ext_resource path="res://Source/InteractableItems/Doors/Door.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprites/Objects/InteractableItems/Doors/door4.png" type="Texture" id=13]
 
 [node name="Level_05" type="Node2D"]
 script = ExtResource( 1 )
@@ -59,6 +60,10 @@ position = Vector2( 938.937, 220.175 )
 
 [node name="Door" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1043.64, 211.971 )
+
+[node name="Start" type="Sprite" parent="."]
+position = Vector2( 69.796, 211.949 )
+texture = ExtResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 70.5891, 214.584 )
