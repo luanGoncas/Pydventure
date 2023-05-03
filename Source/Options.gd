@@ -5,8 +5,14 @@ func _ready():
 	$VBoxContainer/VBoxContainer/Next.grab_focus()
 	pass # Replace with function body.
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
 func _on_Next_pressed():
-	SceneChanger.change_scene("res://Source/MainMenu.tscn")
+	SceneChanger.change_scene("res://Source/Instructions.tscn")
 	pass # Replace with function body.
 
 

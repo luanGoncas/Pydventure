@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Pydventure"
-run/main_scene="res://Source/Cutscenes/Chapter01/CommonWorld.tscn"
+run/main_scene="res://Source/MainMenu.tscn"
 config/icon="res://Sprites/Scenes/python-logo.png"
 
 [autoload]

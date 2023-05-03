@@ -6,7 +6,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Next_pressed():
-	SceneChanger.change_scene("res://Source/Cutscenes/Chapter01/CommonWorld.tscn")
+	SceneChanger.change_scene("res://Source/MainMenu.tscn")
 	pass # Replace with function body.
 
 

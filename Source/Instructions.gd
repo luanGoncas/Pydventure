@@ -4,12 +4,7 @@ extends Node
 func _ready():
 	$VBoxContainer/VBoxContainer/Next.grab_focus()
 	pass # Replace with function body.
-
+	
 func _on_Next_pressed():
-	SceneChanger.change_scene("res://Source/MainMenu.tscn")
-	pass # Replace with function body.
-
-
-func _on_Next2_pressed():
-	get_tree().quit()
+	SceneChanger.change_scene("res://Source/Cutscenes/Chapter01/CommonWorld.tscn")
 	pass # Replace with function body.

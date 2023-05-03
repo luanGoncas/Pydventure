@@ -28,12 +28,11 @@ region_rect = Rect2( 1387.02, 1, 128, 92 )
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 6 )]
 position = Vector2( 540.23, 240.416 )
-frame = 0
 flip_h = true
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 5 )]
 position = Vector2( 101.938, 269.948 )
-frame = 2
+frame = 4
 
 [node name="scroll_big_transparent" type="Sprite" parent="."]
 position = Vector2( 248.987, 251.099 )
@@ -52,13 +51,13 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_right = 5338.0
-margin_bottom = 206.0
+margin_bottom = 187.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
 margin_left = 2382.0
 margin_right = 2955.0
-margin_bottom = 206.0
+margin_bottom = 187.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -72,13 +71,12 @@ protagonista entra em uma nova sala onde vê um tinteiro e uma pintura próxima.
 explica que a função \"print\" em Python exibe informações para uma pessoa. Segundo ele, o
 protagonista deve pegar o tinteiro para escrever essa mensagem na pintura para que o
 pergaminho gere o código desejado. Faça isto, e lembre-se: A porta só poderá ser aberta ao
-cumprir TODOS os desafios da sala!
-E - Interagir   Espaço - Pular"
+cumprir TODOS os desafios da sala!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 210.0
+margin_top = 191.0
 margin_right = 5338.0
-margin_bottom = 390.0
+margin_bottom = 371.0
 rect_min_size = Vector2( 0, 180 )
 alignment = 1
 
