@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Python Educational Game"
+config/name="Pydventure"
 run/main_scene="res://Source/Cutscenes/Chapter01/CommonWorld.tscn"
 config/icon="res://icon.png"
 
@@ -28,6 +28,7 @@ SceneChanger="*res://Source/Autoload/SceneChanger.tscn"
 
 window/size/width=640
 window/size/height=360
+window/size/fullscreen=true
 window/size/test_width=640
 window/size/test_height=360
 window/dpi/allow_hidpi=true
@@ -75,4 +76,5 @@ jump={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
