@@ -68,8 +68,8 @@ arrow_margin_from_center = 72
 margin_top = 92.0
 margin_right = 5338.0
 margin_bottom = 112.0
-focus_neighbour_top = NodePath("../Next2")
-focus_neighbour_bottom = NodePath("../Next2")
+focus_neighbour_top = NodePath("../Next")
+focus_neighbour_bottom = NodePath("../Next")
 text = "Sair"
 arrow_margin_from_center = 51
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]

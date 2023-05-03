@@ -27,33 +27,35 @@ texture = ExtResource( 9 )
 
 [node name="Cauldron" parent="." instance=ExtResource( 13 )]
 position = Vector2( 421.437, 232.822 )
-frame = 3
+frame = 4
 playing = true
 object_target = ExtResource( 17 )
 
 [node name="Cauldron2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 389.511, 232.869 )
-frame = 2
+frame = 3
 playing = true
 object_target = ExtResource( 16 )
 
 [node name="Cauldron3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 357.446, 233.123 )
-frame = 2
+frame = 3
 object_target = ExtResource( 17 )
 
 [node name="Cauldron4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 453.478, 232.216 )
+frame = 1
 playing = true
 object_target = ExtResource( 16 )
 
 [node name="GuiderVanRossum" parent="." instance=ExtResource( 8 )]
 position = Vector2( 537.84, 241.194 )
+frame = 4
 flip_h = true
 
 [node name="PlayerCutsceneIdle" parent="." instance=ExtResource( 10 )]
 position = Vector2( 105.839, 271.139 )
-frame = 4
+frame = 6
 
 [node name="scroll_big_transparent" type="Sprite" parent="."]
 position = Vector2( 271.856, 234.239 )
@@ -72,13 +74,14 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_right = 5338.0
-margin_bottom = 206.0
+margin_bottom = 180.0
 rect_min_size = Vector2( 0, 180 )
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
 margin_left = 2384.0
+margin_top = 6.0
 margin_right = 2953.0
-margin_bottom = 206.0
+margin_bottom = 174.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -91,14 +94,12 @@ isso. Para escrever o código em Python no pergaminho, que continua a acompanhá
 afirma que o protagonista deve pegar as poções próximas aos caldeirões, jogar neles, e pegar
 a poção resultante. A partir daí, o mentor afirma que o protagonista deve tocar as pinturas
 para registrar o resultado e gerar o código no pergaminho. Faça isso, e lembre-se: A porta
-só poderá ser aberta ao cumprir TODOS os desafios da sala!
-
- E - Interagir   Espaço - Pular"
+só poderá ser aberta ao cumprir TODOS os desafios da sala!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 210.0
+margin_top = 184.0
 margin_right = 5338.0
-margin_bottom = 390.0
+margin_bottom = 364.0
 rect_min_size = Vector2( 0, 180 )
 alignment = 1
 
