@@ -37,7 +37,7 @@ position = Vector2( 1687.72, 313.514 )
 
 [node name="AnimatedSprite" parent="Córdex_2" index="0"]
 animation = "casting_spell"
-frame = 4
+frame = 2
 playing = true
 flip_h = true
 
@@ -101,54 +101,79 @@ text = "else:
    print()"
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox" index="1"]
-margin_left = -286.93
-margin_top = -50.6024
-margin_right = 922.07
-margin_bottom = 313.398
+margin_left = -296.232
+margin_top = -79.3109
+margin_right = 912.768
+margin_bottom = 311.689
 
 [node name="CenterContainer" parent="Player/QuestionBoxes/QuestionBox/VBoxContainer" index="0"]
 margin_right = 1209.0
+margin_bottom = 207.0
 
 [node name="Label" parent="Player/QuestionBoxes/QuestionBox/VBoxContainer/CenterContainer" index="0"]
-margin_left = 303.0
-margin_top = 64.0
-margin_right = 906.0
-margin_bottom = 115.0
-text = "Qual instrução deve ser escrita no pergaminho ao escrever o no-
-me \"Joãozinho\" em uma pintura, semelhante a Fase 1? "
+margin_left = 447.0
+margin_top = 0.0
+margin_right = 761.0
+margin_bottom = 207.0
+text = "
+
+
+
+
+
+
+
+
+
+
+
+Qual instrução deve ser escrita no pergaminho ao escrever o nome
+\"Joãozinho\" em uma pintura, semelhante a Fase 1? "
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox/VBoxContainer" index="1"]
+margin_top = 211.0
 margin_right = 1209.0
+margin_bottom = 391.0
 
 [node name="Option1" parent="Player/QuestionBoxes/QuestionBox/VBoxContainer/VBoxContainer" index="0"]
 margin_right = 1209.0
 text = "print(\"Joãozinho\")"
+arrow_margin_from_center = 51
 
 [node name="Option2" parent="Player/QuestionBoxes/QuestionBox/VBoxContainer/VBoxContainer" index="1"]
 margin_right = 1209.0
 text = "print(\"Olá Mundo\")"
+arrow_margin_from_center = 54
 
 [node name="Option3" parent="Player/QuestionBoxes/QuestionBox/VBoxContainer/VBoxContainer" index="2"]
 margin_right = 1209.0
 text = "print(\"Little John\")"
+arrow_margin_from_center = 51
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox2" index="1"]
-margin_left = -447.696
-margin_top = -43.1374
-margin_right = 1100.3
-margin_bottom = 320.863
+margin_left = -453.069
+margin_top = -52.1423
+margin_right = 1094.93
+margin_bottom = 323.858
 
 [node name="CenterContainer" parent="Player/QuestionBoxes/QuestionBox2/VBoxContainer" index="0"]
 margin_right = 1547.0
 
 [node name="Label" parent="Player/QuestionBoxes/QuestionBox2/VBoxContainer/CenterContainer" index="0"]
-margin_left = 463.0
-margin_top = 51.0
-margin_right = 1083.0
-margin_bottom = 129.0
-text = "Que instrução deve ser escrita no pergaminho ao armazenar a so-
-ma das pocoes 2 e 3 em um baú chamado \"soma\", resultante de
-um caldeirão?"
+margin_left = 602.0
+margin_right = 945.0
+text = "
+
+
+
+
+
+
+
+
+
+Que instrução deve ser escrita no pergaminho ao armazenar a soma das
+poções 2 e 3 em um baú chamado \"soma\", resultante de um caldeirão?"
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox2/VBoxContainer" index="1"]
 margin_right = 1547.0
@@ -156,73 +181,91 @@ margin_right = 1547.0
 [node name="Option1" parent="Player/QuestionBoxes/QuestionBox2/VBoxContainer/VBoxContainer" index="0"]
 margin_right = 1547.0
 text = "2 + 3 = soma"
-arrow_margin_from_center = 82
+arrow_margin_from_center = 43
 
 [node name="Option2" parent="Player/QuestionBoxes/QuestionBox2/VBoxContainer/VBoxContainer" index="1"]
 margin_right = 1547.0
 text = "soma = 2 + 3"
-arrow_margin_from_center = 81
+arrow_margin_from_center = 43
 
 [node name="Option3" parent="Player/QuestionBoxes/QuestionBox2/VBoxContainer/VBoxContainer" index="2"]
 margin_right = 1547.0
 text = "soma == 2 + 3"
-arrow_margin_from_center = 85
+arrow_margin_from_center = 45
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox3" index="1"]
-margin_left = -1004.82
-margin_top = -22.766
-margin_right = 1658.18
-margin_bottom = 341.234
+margin_left = -1009.58
+margin_top = -36.3518
+margin_right = 1653.42
+margin_bottom = 354.648
 
 [node name="CenterContainer" parent="Player/QuestionBoxes/QuestionBox3/VBoxContainer" index="0"]
 margin_right = 2663.0
+margin_bottom = 192.0
 
 [node name="Label" parent="Player/QuestionBoxes/QuestionBox3/VBoxContainer/CenterContainer" index="0"]
-margin_left = 1021.0
-margin_top = 37.0
-margin_right = 1642.0
-margin_bottom = 142.0
-text = "Ao escrever em uma pintura, precisa-se copiar o conteúdo de qual
-baú - \"Bau1\" ou \"Bau2\" - para uma terceira variável chamada
-\"Copia\", se for considerar que \"Bau1\" contém um número e \"Bau2\"
-contém uma palavra que será uma saída na tela? "
+margin_left = 1159.0
+margin_top = 0.0
+margin_right = 1504.0
+margin_bottom = 192.0
+text = "
+
+
+
+
+
+
+
+
+Ao escrever em uma pintura, precisa-se copiar o conteúdo de qual baú -
+\"Bau1\" ou \"Bau2\" - para uma terceira variável chamada \"Copia\", se for
+considerar que \"Bau1\" contém um número e \"Bau2\" contém uma palavra
+que será uma saída na tela?"
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox3/VBoxContainer" index="1"]
+margin_top = 196.0
 margin_right = 2663.0
+margin_bottom = 376.0
 
 [node name="Option1" parent="Player/QuestionBoxes/QuestionBox3/VBoxContainer/VBoxContainer" index="0"]
 margin_right = 2663.0
 text = "Bau1"
-arrow_margin_from_center = 55
+arrow_margin_from_center = 31
 
 [node name="Option2" parent="Player/QuestionBoxes/QuestionBox3/VBoxContainer/VBoxContainer" index="1"]
 margin_right = 2663.0
 text = "Nenhum dos baús"
-arrow_margin_from_center = 100
+arrow_margin_from_center = 49
 
 [node name="Option3" parent="Player/QuestionBoxes/QuestionBox3/VBoxContainer/VBoxContainer" index="2"]
 margin_right = 2663.0
 text = "Bau2"
-arrow_margin_from_center = 53
+arrow_margin_from_center = 31
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox4" index="1"]
-margin_left = -752.175
-margin_top = -27.2383
-margin_right = 1398.83
-margin_bottom = 336.762
+margin_left = -756.175
+margin_top = -37.2383
+margin_right = 1394.83
+margin_bottom = 338.762
 
 [node name="CenterContainer" parent="Player/QuestionBoxes/QuestionBox4/VBoxContainer" index="0"]
 margin_right = 2151.0
 
 [node name="Label" parent="Player/QuestionBoxes/QuestionBox4/VBoxContainer/CenterContainer" index="0"]
-margin_left = 767.0
-margin_top = 37.0
-margin_right = 1383.0
-margin_bottom = 142.0
-text = "Ao colocar duas poções de valor 5 em uma balança, interagir com
-ela para escrever em uma pintura, e a instrução exibida no per-
-gaminho for \"print(5 < 5)\", qual informação será escrita na pin-
-tura?"
+margin_left = 907.0
+margin_right = 1243.0
+text = "
+
+
+
+
+
+
+
+
+Ao colocar duas poções de valor 5 em uma balança, interagir com ela
+para escrever em uma pintura, e a instrução exibida no pergaminho for
+\"print(5 < 5)\", qual informação será escrita na pintura?"
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox4/VBoxContainer" index="1"]
 margin_right = 2151.0
@@ -230,38 +273,42 @@ margin_right = 2151.0
 [node name="Option1" parent="Player/QuestionBoxes/QuestionBox4/VBoxContainer/VBoxContainer" index="0"]
 margin_right = 2151.0
 text = "False"
-arrow_margin_from_center = 55
+arrow_margin_from_center = 29
 
 [node name="Option2" parent="Player/QuestionBoxes/QuestionBox4/VBoxContainer/VBoxContainer" index="1"]
 margin_right = 2151.0
 text = "True"
-arrow_margin_from_center = 53
+arrow_margin_from_center = 29
 
 [node name="Option3" parent="Player/QuestionBoxes/QuestionBox4/VBoxContainer/VBoxContainer" index="2"]
 margin_right = 2151.0
 text = "Nao é possível saber"
-arrow_margin_from_center = 106
+arrow_margin_from_center = 54
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox5" index="1"]
-margin_left = -1432.84
-margin_top = -0.252441
-margin_right = 2090.15
-margin_bottom = 363.748
+margin_left = -1440.84
+margin_top = -6.25244
+margin_right = 2082.15
+margin_bottom = 369.748
 
 [node name="CenterContainer" parent="Player/QuestionBoxes/QuestionBox5/VBoxContainer" index="0"]
 margin_right = 3522.0
 
 [node name="Label" parent="Player/QuestionBoxes/QuestionBox5/VBoxContainer/CenterContainer" index="0"]
-margin_left = 1451.0
-margin_top = 10.0
-margin_right = 2070.0
-margin_bottom = 169.0
-text = "Após colocar as poções de valor 6 e 7 em uma balança, uma pin-
-tura vazia é ativada, e, dessa forma, é escrita no pergaminho a
-instrução \"while(true):\" representando um loop infinito, e que es-
-creve \"True\" na pintura. O que acontecerá ao interagir com a ba-
-lança e o pergaminho escrever a instrução \"print(6 > 7)\" dentro
-desse loop?"
+margin_left = 1596.0
+margin_right = 1926.0
+text = "
+
+
+
+
+
+
+Após colocar as poções de valor 6 e 7 em uma balança, uma pintura
+vazia é ativada, e, dessa forma, é escrita no pergaminho a instrução
+\"while(true):\" representando um loop infinito, e que escreve \"True\" na
+pintura. O que acontecerá ao interagir com a balança e o pergaminho
+escrever a instrução \"print(6 > 7)\" dentro desse loop?"
 
 [node name="VBoxContainer" parent="Player/QuestionBoxes/QuestionBox5/VBoxContainer" index="1"]
 margin_right = 3522.0
@@ -269,17 +316,17 @@ margin_right = 3522.0
 [node name="Option1" parent="Player/QuestionBoxes/QuestionBox5/VBoxContainer/VBoxContainer" index="0"]
 margin_right = 3522.0
 text = "A roldana não para, continua com ‘True’ escrito, e nada muda"
-arrow_margin_from_center = 258
+arrow_margin_from_center = 130
 
 [node name="Option2" parent="Player/QuestionBoxes/QuestionBox5/VBoxContainer/VBoxContainer" index="1"]
 margin_right = 3522.0
 text = "A roldana para o movimento, e na pintura é escrito ‘False’"
-arrow_margin_from_center = 247
+arrow_margin_from_center = 119
 
 [node name="Option3" parent="Player/QuestionBoxes/QuestionBox5/VBoxContainer/VBoxContainer" index="2"]
 margin_right = 3522.0
 text = "Ocorre um erro"
-arrow_margin_from_center = 93
+arrow_margin_from_center = 46
 
 [editable path="Córdex_2"]
 
