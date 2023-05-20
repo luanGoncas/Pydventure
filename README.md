@@ -13,17 +13,20 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 ## 🚀 Instalando o Pydventure
 
-Para instalar o Pydventure, siga estas etapas:
+Para jogar o Pydventure, siga estas etapas:
 
-Linux e Windows:
+Windows:
 ```
-1. Abra a Godot Engine
-2. Vá na aba Project > Export para mostrar as plataformas disponíveis.
-3. Clique em Add... e selecione 'Windows Desktop' ou 'Linux'
-4. Clique em 'Export Project'
-5. Selecione um caminho local e qualquer nome de arquivo
-6. Salve o arquivo executável (.exe)
-7. Abra o jogo ao clicar no executável (NÃO É O ARQUIVO PCK)
+1. Baixe o seguinte arquivo zip: https://drive.google.com/file/d/11Midn8E3JgMtAEnjRs6oL13FYLMULsIh/view?usp=sharing
+2. Descompacte e abra a pasta
+3. Abra o arquivo no formato .exe (NÃO É O ARQUIVO PCK)
+```
+
+Linux:
+```
+1. Baixe o seguinte arquivo zip: https://drive.google.com/file/d/15UEREeNpqnprMQ1nkkhC_lA4N-vOMlNV/view?usp=sharing
+2. Descompacte e abra a pasta
+3. Abra o arquivo no formato .x86_64 (NÃO É O ARQUIVO PCK)
 ```
 
 ## 📫 Contribuindo para Pydventure
@@ -81,6 +84,7 @@ O projeto foi, por hora, finalizado e os tópicos abaixo envolvem os futuros tra
 - [ ] Fase para o ensino de listas
 - [ ] Cenas com animação de sprites em Pixel Art
 - [ ] Fases com músicas e objetos e personagens com efeitos sonoros
+- [ ] Plataforma web com ranking
 
 ## 📝 Licença
 
